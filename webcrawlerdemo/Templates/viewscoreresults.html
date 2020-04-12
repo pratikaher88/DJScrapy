@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+
+<h2>Average : {{ average }}</h2> 
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Site Name</th>
+            <th scope="col">Total Pass</th>
+            <th scope="col">Total Verify</th>
+            <th scope="col">Total Violations</th>
+            <th scope="col">Score</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for item in details %}
+
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a href="{{ item.site_name }}">{{ item.site_name }}</a></td>
+            <th scope="row">{{ item.total_pass }}</th>
+            <th scope="row">{{ item.total_verify }}</th>
+            <th scope="row">{{ item.total_violations }}</th>
+            <th scope="row">{{ item.total_score }}</th>
+
+        </tr>
+        
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+{% endblock content %}

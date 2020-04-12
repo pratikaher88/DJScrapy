@@ -1,0 +1,467 @@
+2020-04-12 12:33:47 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: customcrawler)
+2020-04-12 12:33:47 [scrapy.utils.log] INFO: Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.6.10 (default, Mar 31 2020, 16:24:51) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.9.93-linuxkit-aufs-x86_64-with-debian-10.3
+2020-04-12 12:33:47 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'customcrawler', 'CLOSESPIDER_PAGECOUNT': '100', 'CLOSESPIDER_TIMEOUT': '0', 'CONCURRENT_REQUESTS': 32, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/customcrawler/toscrapespiderax/d842e23a7cb911eab5a30242c0a81003.log', 'NEWSPIDER_MODULE': 'customcrawler.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['customcrawler.spiders']}
+2020-04-12 12:33:47 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2020-04-12 12:33:47 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-04-12 12:33:47 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-04-12 12:33:47 [scrapy.middleware] INFO: Enabled item pipelines:
+['customcrawler.pipelines.ScrapyAppPipeline']
+2020-04-12 12:33:47 [scrapy.core.engine] INFO: Spider opened
+2020-04-12 12:33:47 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-04-12 12:33:47 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2020-04-12 12:33:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/> (referer: None)
+2020-04-12 12:33:52 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.uia.no/#content-middle> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-04-12 12:33:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/informasjonskapsler-paa-uia.no> (referer: https://www.uia.no/)
+2020-04-12 12:33:57 [amqp] DEBUG: Start from server, version: 0.9, properties: {'capabilities': {'publisher_confirms': True, 'exchange_exchange_bindings': True, 'basic.nack': True, 'consumer_cancel_notify': True, 'connection.blocked': True, 'consumer_priorities': True, 'authentication_failure_close': True, 'per_consumer_qos': True, 'direct_reply_to': True}, 'cluster_name': 'rabbit@rabbitmq', 'copyright': 'Copyright (c) 2007-2020 Pivotal Software, Inc.', 'information': 'Licensed under the MPL 1.1. Website: https://rabbitmq.com', 'platform': 'Erlang/OTP 22.3.2', 'product': 'RabbitMQ', 'version': '3.8.3'}, mechanisms: [b'AMQPLAIN', b'PLAIN'], locales: ['en_US']
+2020-04-12 12:33:57 [amqp] DEBUG: using channel_id: 1
+2020-04-12 12:33:57 [amqp] DEBUG: Channel open
+2020-04-12 12:33:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/informasjonskapsler-paa-uia.no>
+{'extracted_url': 'https://www.uia.no/informasjonskapsler-paa-uia.no'}
+2020-04-12 12:33:58 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/en> from <GET https://www.uia.no/en/>
+2020-04-12 12:33:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra> (referer: https://www.uia.no/)
+2020-04-12 12:33:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra'}
+2020-04-12 12:34:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/> (referer: https://www.uia.no/)
+2020-04-12 12:34:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/finn-frem/kontaktinformasjon> (referer: https://www.uia.no/)
+2020-04-12 12:34:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/>
+{'extracted_url': 'https://www.uia.no/'}
+2020-04-12 12:34:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/finn-frem/kontaktinformasjon>
+{'extracted_url': 'https://www.uia.no/om-uia/finn-frem/kontaktinformasjon'}
+2020-04-12 12:34:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/ledige-stillinger> (referer: https://www.uia.no/)
+2020-04-12 12:34:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/ledige-stillinger>
+{'extracted_url': 'https://www.uia.no/ledige-stillinger'}
+2020-04-12 12:34:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier2> (referer: https://www.uia.no/)
+2020-04-12 12:34:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier2>
+{'extracted_url': 'https://www.uia.no/studier2'}
+2020-04-12 12:34:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student> (referer: https://www.uia.no/)
+2020-04-12 12:34:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search> (referer: https://www.uia.no/)
+2020-04-12 12:34:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student>
+{'extracted_url': 'https://www.uia.no/student'}
+2020-04-12 12:34:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search>
+{'extracted_url': 'https://www.uia.no/study/search'}
+2020-04-12 12:34:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/samarbeid> (referer: https://www.uia.no/)
+2020-04-12 12:34:02 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.uia.no/for-ansatte> (referer: https://www.uia.no/)
+2020-04-12 12:34:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/samarbeid>
+{'extracted_url': 'https://www.uia.no/samarbeid'}
+2020-04-12 12:34:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.uia.no/for-ansatte>: HTTP status code is not handled or not allowed
+2020-04-12 12:34:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/student/timeplanar-paa-uia> from <GET http://www.uia.no/student/timeplanar-paa-uia>
+2020-04-12 12:34:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/student/canvas> from <GET http://www.uia.no/student/canvas>
+2020-04-12 12:34:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studentreisen/studievalget> (referer: https://www.uia.no/)
+2020-04-12 12:34:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studentreisen/studievalget>
+{'extracted_url': 'https://www.uia.no/studentreisen/studievalget'}
+2020-04-12 12:34:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia> (referer: https://www.uia.no/)
+2020-04-12 12:34:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/kampanjer/etter-og-videreutdanningstilbud-ved-uia-hoesten-2020> (referer: https://www.uia.no/)
+2020-04-12 12:34:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia>
+{'extracted_url': 'https://www.uia.no/om-uia'}
+2020-04-12 12:34:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/kampanjer/etter-og-videreutdanningstilbud-ved-uia-hoesten-2020>
+{'extracted_url': 'https://www.uia.no/kampanjer/etter-og-videreutdanningstilbud-ved-uia-hoesten-2020'}
+2020-04-12 12:34:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/bibliotek> (referer: https://www.uia.no/)
+2020-04-12 12:34:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/bibliotek>
+{'extracted_url': 'https://www.uia.no/bibliotek'}
+2020-04-12 12:34:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/rektor-sunniva-hilser-til-studentene> (referer: https://www.uia.no/)
+2020-04-12 12:34:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/forskning> (referer: https://www.uia.no/)
+2020-04-12 12:34:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter> (referer: https://www.uia.no/)
+2020-04-12 12:34:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/rektor-sunniva-hilser-til-studentene>
+{'extracted_url': 'https://www.uia.no/nyheter/rektor-sunniva-hilser-til-studentene'}
+2020-04-12 12:34:05 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.facebook.com': <GET https://www.facebook.com/sharer/sharer.php?u=https://www.uia.no/nyheter/rektor-sunniva-hilser-til-studentene>
+2020-04-12 12:34:05 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'twitter.com': <GET https://twitter.com/intent/tweet?url=https://www.uia.no/nyheter/rektor-sunniva-hilser-til-studentene>
+2020-04-12 12:34:05 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.linkedin.com': <GET https://www.linkedin.com/shareArticle?mini=true&url=https://www.uia.no/nyheter/rektor-sunniva-hilser-til-studentene>
+2020-04-12 12:34:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/forskning>
+{'extracted_url': 'https://www.uia.no/forskning'}
+2020-04-12 12:34:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter>
+{'extracted_url': 'https://www.uia.no/nyheter'}
+2020-04-12 12:34:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/uia-vil-skreddersy-kompetansehevings-tilbud-til-arbeidsledige> (referer: https://www.uia.no/)
+2020-04-12 12:34:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/uia-vil-skreddersy-kompetansehevings-tilbud-til-arbeidsledige>
+{'extracted_url': 'https://www.uia.no/nyheter/uia-vil-skreddersy-kompetansehevings-tilbud-til-arbeidsledige'}
+2020-04-12 12:34:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/kk/tlf> (referer: https://www.uia.no/)
+2020-04-12 12:34:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/kk/tlf>
+{'extracted_url': 'https://www.uia.no/kk/tlf'}
+2020-04-12 12:34:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/uia-fortsatt-stengt-etter-paaske-men-noen-slipper-inn-fra-27.-april> (referer: https://www.uia.no/)
+2020-04-12 12:34:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/uia-laaner-ut-sykehusutstyr> (referer: https://www.uia.no/)
+2020-04-12 12:34:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/uia-fortsatt-stengt-etter-paaske-men-noen-slipper-inn-fra-27.-april>
+{'extracted_url': 'https://www.uia.no/nyheter/uia-fortsatt-stengt-etter-paaske-men-noen-slipper-inn-fra-27.-april'}
+2020-04-12 12:34:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/uia-laaner-ut-sykehusutstyr>
+{'extracted_url': 'https://www.uia.no/nyheter/uia-laaner-ut-sykehusutstyr'}
+2020-04-12 12:34:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/uia/news?tags[]=EVU> (referer: https://www.uia.no/)
+2020-04-12 12:34:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/zoom-og-sikkerhet> (referer: https://www.uia.no/)
+2020-04-12 12:34:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/uia/news?tags[]=EVU>
+{'extracted_url': 'https://www.uia.no/uia/news?tags[]=EVU'}
+2020-04-12 12:34:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/uia-og-mil-i-printedugnad-for-aa-hjelpe-soerlandet-sykehus> (referer: https://www.uia.no/)
+2020-04-12 12:34:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/zoom-og-sikkerhet>
+{'extracted_url': 'https://www.uia.no/nyheter/zoom-og-sikkerhet'}
+2020-04-12 12:34:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/uia-og-mil-i-printedugnad-for-aa-hjelpe-soerlandet-sykehus>
+{'extracted_url': 'https://www.uia.no/nyheter/uia-og-mil-i-printedugnad-for-aa-hjelpe-soerlandet-sykehus'}
+2020-04-12 12:34:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/alle-eksamener-er-lagt-om> (referer: https://www.uia.no/)
+2020-04-12 12:34:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/alle-eksamener-er-lagt-om>
+{'extracted_url': 'https://www.uia.no/nyheter/alle-eksamener-er-lagt-om'}
+2020-04-12 12:34:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/studentpraksis-i-koronakrisen> (referer: https://www.uia.no/)
+2020-04-12 12:34:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/studentpraksis-i-koronakrisen>
+{'extracted_url': 'https://www.uia.no/nyheter/studentpraksis-i-koronakrisen'}
+2020-04-12 12:34:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/har-nok-kandidatar-til-faste-plassar> (referer: https://www.uia.no/)
+2020-04-12 12:34:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/har-nok-kandidatar-til-faste-plassar>
+{'extracted_url': 'https://www.uia.no/nyheter/har-nok-kandidatar-til-faste-plassar'}
+2020-04-12 12:34:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/tror-kunstig-intelligens-vil-endre-folks-tillit-til-banken> (referer: https://www.uia.no/)
+2020-04-12 12:34:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/god-respons-paa-take-away-fra-uia-biblioteket> (referer: https://www.uia.no/)
+2020-04-12 12:34:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/tror-kunstig-intelligens-vil-endre-folks-tillit-til-banken>
+{'extracted_url': 'https://www.uia.no/nyheter/tror-kunstig-intelligens-vil-endre-folks-tillit-til-banken'}
+2020-04-12 12:34:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/god-respons-paa-take-away-fra-uia-biblioteket>
+{'extracted_url': 'https://www.uia.no/nyheter/god-respons-paa-take-away-fra-uia-biblioteket'}
+2020-04-12 12:34:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/palmesus-og-kilden-gir-praksisplass-til-uia-studenter> (referer: https://www.uia.no/)
+2020-04-12 12:34:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset> (referer: https://www.uia.no/)
+2020-04-12 12:34:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/palmesus-og-kilden-gir-praksisplass-til-uia-studenter>
+{'extracted_url': 'https://www.uia.no/nyheter/palmesus-og-kilden-gir-praksisplass-til-uia-studenter'}
+2020-04-12 12:34:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset>
+{'extracted_url': 'https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset'}
+2020-04-12 12:34:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/jesus-og-muhammed-er-ute-av-ny-fagplan-for-religionsfaget> (referer: https://www.uia.no/)
+2020-04-12 12:34:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/jesus-og-muhammed-er-ute-av-ny-fagplan-for-religionsfaget>
+{'extracted_url': 'https://www.uia.no/nyheter/jesus-og-muhammed-er-ute-av-ny-fagplan-for-religionsfaget'}
+2020-04-12 12:34:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/vel-ny-representant-til-universitetsstyret> (referer: https://www.uia.no/)
+2020-04-12 12:34:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/vel-ny-representant-til-universitetsstyret>
+{'extracted_url': 'https://www.uia.no/nyheter/vel-ny-representant-til-universitetsstyret'}
+2020-04-12 12:34:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en> (referer: https://www.uia.no/)
+2020-04-12 12:34:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en>
+{'extracted_url': 'https://www.uia.no/en'}
+2020-04-12 12:34:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/arrangementer> (referer: https://www.uia.no/)
+2020-04-12 12:34:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/arrangementer>
+{'extracted_url': 'https://www.uia.no/arrangementer'}
+2020-04-12 12:34:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia> (referer: https://www.uia.no/)
+2020-04-12 12:34:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia'}
+2020-04-12 12:34:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/cookies-on-uia.no> (referer: https://www.uia.no/informasjonskapsler-paa-uia.no)
+2020-04-12 12:34:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/cookies-on-uia.no>
+{'extracted_url': 'https://www.uia.no/en/cookies-on-uia.no'}
+2020-04-12 12:34:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/timeplanar-paa-uia> (referer: https://www.uia.no/)
+2020-04-12 12:34:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/timeplanar-paa-uia>
+{'extracted_url': 'https://www.uia.no/student/timeplanar-paa-uia'}
+2020-04-12 12:34:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/etiske-retningslinjer-ved-uia> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/etiske-retningslinjer-ved-uia>
+{'extracted_url': 'https://www.uia.no/om-uia/etiske-retningslinjer-ved-uia'}
+2020-04-12 12:34:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/varsling-for-studenter> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/varsling-for-studenter>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/varsling-for-studenter'}
+2020-04-12 12:34:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/hvordan-varsle> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/hvordan-varsle>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/hvordan-varsle'}
+2020-04-12 12:34:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/about-uia/speak-up> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/about-uia/speak-up>
+{'extracted_url': 'https://www.uia.no/en/about-uia/speak-up'}
+2020-04-12 12:34:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/kven-kan-varsle> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/kven-kan-varsle>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/kven-kan-varsle'}
+2020-04-12 12:34:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/hvordan-varsle/har-du-opplevd-uoensket-seksuell-oppmerksomhet-eller-trakassering-ved-uia> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/hvordan-varsle/har-du-opplevd-uoensket-seksuell-oppmerksomhet-eller-trakassering-ved-uia>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/hvordan-varsle/har-du-opplevd-uoensket-seksuell-oppmerksomhet-eller-trakassering-ved-uia'}
+2020-04-12 12:34:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/hva-er-hva> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/hva-er-hva>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/hva-er-hva'}
+2020-04-12 12:34:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet'}
+2020-04-12 12:34:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/melde-inn-hms-avvik> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/melde-inn-hms-avvik>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/melde-inn-hms-avvik'}
+2020-04-12 12:34:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/evaluering-av-emner-og-studieprogram> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-04-12 12:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/evaluering-av-emner-og-studieprogram>
+{'extracted_url': 'https://www.uia.no/student/evaluering-av-emner-og-studieprogram'}
+2020-04-12 12:34:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/campus-kristiansand> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-04-12 12:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/campus-kristiansand>
+{'extracted_url': 'https://www.uia.no/om-uia/campus-kristiansand'}
+2020-04-12 12:34:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/about-uia/getting-around/contact-information> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-04-12 12:34:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/campus-grimstad> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-04-12 12:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/about-uia/getting-around/contact-information>
+{'extracted_url': 'https://www.uia.no/en/about-uia/getting-around/contact-information'}
+2020-04-12 12:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/campus-grimstad>
+{'extracted_url': 'https://www.uia.no/om-uia/campus-grimstad'}
+2020-04-12 12:34:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/hjelp-og-veiledning/tjenester-og-hjelp-for-studenter> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-04-12 12:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/hjelp-og-veiledning/tjenester-og-hjelp-for-studenter>
+{'extracted_url': 'https://www.uia.no/student/hjelp-og-veiledning/tjenester-og-hjelp-for-studenter'}
+2020-04-12 12:34:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/finn-frem/aapningstider-paa-universitetet-i-agder> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-04-12 12:34:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/finn-frem/aapningstider-paa-universitetet-i-agder>
+{'extracted_url': 'https://www.uia.no/om-uia/finn-frem/aapningstider-paa-universitetet-i-agder'}
+2020-04-12 12:34:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.uia.no/student/uia-hjelp> from <GET https://www.uia.no/student/it-hjelp#1884174228>
+2020-04-12 12:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/vacancies> (referer: https://www.uia.no/ledige-stillinger)
+2020-04-12 12:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/vacancies>
+{'extracted_url': 'https://www.uia.no/en/vacancies'}
+2020-04-12 12:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/aa-jobbe-ved-uia/ansettelsesprosessen> (referer: https://www.uia.no/ledige-stillinger)
+2020-04-12 12:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier2/etter-og-videreutdanning> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/aa-jobbe-ved-uia/ansettelsesprosessen>
+{'extracted_url': 'https://www.uia.no/om-uia/aa-jobbe-ved-uia/ansettelsesprosessen'}
+2020-04-12 12:34:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier2/etter-og-videreutdanning>
+{'extracted_url': 'https://www.uia.no/studier2/etter-og-videreutdanning'}
+2020-04-12 12:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/aa-jobbe-ved-uia> (referer: https://www.uia.no/ledige-stillinger)
+2020-04-12 12:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/aa-jobbe-ved-uia>
+{'extracted_url': 'https://www.uia.no/om-uia/aa-jobbe-ved-uia'}
+2020-04-12 12:34:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/studies> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/studies>
+{'extracted_url': 'https://www.uia.no/en/studies'}
+2020-04-12 12:34:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/hjelp-og-veiledning/trenger-du-studieveiledning> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/hjelp-og-veiledning/trenger-du-studieveiledning>
+{'extracted_url': 'https://www.uia.no/student/hjelp-og-veiledning/trenger-du-studieveiledning'}
+2020-04-12 12:34:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/forskning/forskerutdanning-ved-uia> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studyadm/available#tab-to-ce> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/forskning/forskerutdanning-ved-uia>
+{'extracted_url': 'https://www.uia.no/forskning/forskerutdanning-ved-uia'}
+2020-04-12 12:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studyadm/available>
+{'extracted_url': 'https://www.uia.no/studyadm/available'}
+2020-04-12 12:34:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier2/opptak> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier2/opptak>
+{'extracted_url': 'https://www.uia.no/studier2/opptak'}
+2020-04-12 12:34:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/student> (referer: https://www.uia.no/student)
+2020-04-12 12:34:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier2/hvorfor-studere-paa-uia> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/student>
+{'extracted_url': 'https://www.uia.no/en/student'}
+2020-04-12 12:34:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier2/hvorfor-studere-paa-uia>
+{'extracted_url': 'https://www.uia.no/studier2/hvorfor-studere-paa-uia'}
+2020-04-12 12:34:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/livet-paa-campus> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/livet-paa-campus>
+{'extracted_url': 'https://www.uia.no/livet-paa-campus'}
+2020-04-12 12:34:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studentreisen/lykkes-som-student> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studentreisen/lykkes-som-student>
+{'extracted_url': 'https://www.uia.no/studentreisen/lykkes-som-student'}
+2020-04-12 12:34:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/uia-hjelp/it-og-medietjenester/hvordan-jobbe-sikkert-utenfor-campus> (referer: https://www.uia.no/student)
+2020-04-12 12:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/uia-hjelp/it-og-medietjenester/hvordan-jobbe-sikkert-utenfor-campus>
+{'extracted_url': 'https://www.uia.no/student/uia-hjelp/it-og-medietjenester/hvordan-jobbe-sikkert-utenfor-campus'}
+2020-04-12 12:34:30 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'eur01.safelinks.protection.outlook.com': <GET https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.uia.no%2Ffor-ansatte%2Fadministrasjon-og-tjenester%2Finformasjonssikkerhet%2Fsikker-lagring&data=02%7C01%7Canette.osaland%40uia.no%7Ce1518efadc53472f261708d7cbe6169a%7C8482881e36994b3fb135cf4800bc1efb%7C1%7C0%7C637202061385455805&sdata=S0L4tUW4o%2BmxhCP4c8P8NN5teXogoroxWEr8zc8WIEU%3D&reserved=0>
+2020-04-12 12:34:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/studentweb> (referer: https://www.uia.no/student)
+2020-04-12 12:34:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/studentweb>
+{'extracted_url': 'https://www.uia.no/student/studentweb'}
+2020-04-12 12:34:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studentreisen/fortsett-aa-laere> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studentreisen/fortsett-aa-laere>
+{'extracted_url': 'https://www.uia.no/studentreisen/fortsett-aa-laere'}
+2020-04-12 12:34:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studentreisen/faa-jobb-etter-studiene> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studentreisen/faa-jobb-etter-studiene>
+{'extracted_url': 'https://www.uia.no/studentreisen/faa-jobb-etter-studiene'}
+2020-04-12 12:34:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/uia-hjelp> (referer: https://www.uia.no/student)
+2020-04-12 12:34:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/administrer-dine-studier> (referer: https://www.uia.no/student)
+2020-04-12 12:34:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/uia-hjelp>
+{'extracted_url': 'https://www.uia.no/student/uia-hjelp'}
+2020-04-12 12:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/administrer-dine-studier>
+{'extracted_url': 'https://www.uia.no/student/administrer-dine-studier'}
+2020-04-12 12:34:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/canvas> (referer: https://www.uia.no/student)
+2020-04-12 12:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/canvas>
+{'extracted_url': 'https://www.uia.no/student/canvas'}
+2020-04-12 12:34:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/eksamen> (referer: https://www.uia.no/student)
+2020-04-12 12:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/eksamen>
+{'extracted_url': 'https://www.uia.no/student/eksamen'}
+2020-04-12 12:34:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studentreisen/snart-student> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studentreisen/snart-student>
+{'extracted_url': 'https://www.uia.no/studentreisen/snart-student'}
+2020-04-12 12:34:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studentreisen/ny-som-student> (referer: https://www.uia.no/studier2)
+2020-04-12 12:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studentreisen/ny-som-student>
+{'extracted_url': 'https://www.uia.no/studentreisen/ny-som-student'}
+2020-04-12 12:34:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/utveksling> (referer: https://www.uia.no/student)
+2020-04-12 12:34:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/utveksling>
+{'extracted_url': 'https://www.uia.no/student/utveksling'}
+2020-04-12 12:34:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder> (referer: https://www.uia.no/student)
+2020-04-12 12:34:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/studenttillitsvalgt> (referer: https://www.uia.no/student)
+2020-04-12 12:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder>
+{'extracted_url': 'https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder'}
+2020-04-12 12:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/studenttillitsvalgt>
+{'extracted_url': 'https://www.uia.no/student/studenttillitsvalgt'}
+2020-04-12 12:34:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/ressurssenteret> (referer: https://www.uia.no/student)
+2020-04-12 12:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/ressurssenteret>
+{'extracted_url': 'https://www.uia.no/student/ressurssenteret'}
+2020-04-12 12:34:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/studentombud> (referer: https://www.uia.no/student)
+2020-04-12 12:34:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/organisasjonen/akademisk-kalender> (referer: https://www.uia.no/student)
+2020-04-12 12:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/studentombud>
+{'extracted_url': 'https://www.uia.no/student/studentombud'}
+2020-04-12 12:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/organisasjonen/akademisk-kalender>
+{'extracted_url': 'https://www.uia.no/om-uia/organisasjonen/akademisk-kalender'}
+2020-04-12 12:34:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studieplaner/search> (referer: https://www.uia.no/student)
+2020-04-12 12:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studieplaner/search>
+{'extracted_url': 'https://www.uia.no/studieplaner/search'}
+2020-04-12 12:34:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/registrer-oppmoete> (referer: https://www.uia.no/student)
+2020-04-12 12:34:37 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/nyskaping> from <GET http://www.uia.no/nyskaping>
+2020-04-12 12:34:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/registrer-oppmoete>
+{'extracted_url': 'https://www.uia.no/student/registrer-oppmoete'}
+2020-04-12 12:34:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/nyttige-verktoey/brev-og-bestillinger> (referer: https://www.uia.no/student)
+2020-04-12 12:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/nyttige-verktoey/brev-og-bestillinger>
+{'extracted_url': 'https://www.uia.no/student/nyttige-verktoey/brev-og-bestillinger'}
+2020-04-12 12:34:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia/personvernerklaering-for-studenter-og-soekere> (referer: https://www.uia.no/student)
+2020-04-12 12:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia/personvernerklaering-for-studenter-og-soekere>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia/personvernerklaering-for-studenter-og-soekere'}
+2020-04-12 12:34:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/reglement-og-retningslinjer> (referer: https://www.uia.no/student)
+2020-04-12 12:34:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/reglement-og-retningslinjer>
+{'extracted_url': 'https://www.uia.no/student/reglement-og-retningslinjer'}
+2020-04-12 12:34:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier2/livet-rundt-studiene2/deltidsjobb> (referer: https://www.uia.no/student)
+2020-04-12 12:34:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/uia-karriere> (referer: https://www.uia.no/student)
+2020-04-12 12:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier2/livet-rundt-studiene2/deltidsjobb>
+{'extracted_url': 'https://www.uia.no/studier2/livet-rundt-studiene2/deltidsjobb'}
+2020-04-12 12:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/uia-karriere>
+{'extracted_url': 'https://www.uia.no/student/uia-karriere'}
+2020-04-12 12:34:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/fadderordningen> (referer: https://www.uia.no/student)
+2020-04-12 12:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/fadderordningen>
+{'extracted_url': 'https://www.uia.no/student/fadderordningen'}
+2020-04-12 12:34:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/livet-rundt-studiene/studentforeninger-og-studentaktiviteter-paa-uia> (referer: https://www.uia.no/student)
+2020-04-12 12:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/livet-rundt-studiene/studentforeninger-og-studentaktiviteter-paa-uia>
+{'extracted_url': 'https://www.uia.no/student/livet-rundt-studiene/studentforeninger-og-studentaktiviteter-paa-uia'}
+2020-04-12 12:34:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/livet-rundt-studiene/bli-buddy> (referer: https://www.uia.no/student)
+2020-04-12 12:34:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/livet-rundt-studiene/bli-buddy>
+{'extracted_url': 'https://www.uia.no/student/livet-rundt-studiene/bli-buddy'}
+2020-04-12 12:34:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/livet-rundt-studiene/studentdemokrati> (referer: https://www.uia.no/student)
+2020-04-12 12:34:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/livet-rundt-studiene/studentdemokrati>
+{'extracted_url': 'https://www.uia.no/student/livet-rundt-studiene/studentdemokrati'}
+2020-04-12 12:34:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/study/search> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/study/search>
+{'extracted_url': 'https://www.uia.no/en/study/search'}
+2020-04-12 12:34:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/barnehagelaererutdanning> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/barnehagelaererutdanning>
+{'extracted_url': 'https://www.uia.no/studier/barnehagelaererutdanning'}
+2020-04-12 12:34:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/barnevern> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/barnevern>
+{'extracted_url': 'https://www.uia.no/studier/barnevern'}
+2020-04-12 12:34:47 [scrapy.extensions.logstats] INFO: Crawled 97 pages (at 97 pages/min), scraped 95 items (at 95 items/min)
+2020-04-12 12:34:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/biologi> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/barnehagekunnskap> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/biologi>
+{'extracted_url': 'https://www.uia.no/studier/biologi'}
+2020-04-12 12:34:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/barnehagekunnskap>
+{'extracted_url': 'https://www.uia.no/studier/barnehagekunnskap'}
+2020-04-12 12:34:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/bioingenioer> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:48 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2020-04-12 12:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/bioingenioer>
+{'extracted_url': 'https://www.uia.no/studier/bioingenioer'}
+2020-04-12 12:34:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/anvendt-filosofi> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/anvendt-filosofi>
+{'extracted_url': 'https://www.uia.no/studier/anvendt-filosofi'}
+2020-04-12 12:34:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/barnehagelaererutdanning2> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/barnehagelaererutdanning2>
+{'extracted_url': 'https://www.uia.no/studier/barnehagelaererutdanning2'}
+2020-04-12 12:34:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/biologi2> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/biologi2>
+{'extracted_url': 'https://www.uia.no/studier/biologi2'}
+2020-04-12 12:34:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/byggdesign-ingenioerfag> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/comparative-educational-studies> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/cybersikkerhet> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/byggdesign-ingenioerfag>
+{'extracted_url': 'https://www.uia.no/studier/byggdesign-ingenioerfag'}
+2020-04-12 12:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/comparative-educational-studies>
+{'extracted_url': 'https://www.uia.no/studier/comparative-educational-studies'}
+2020-04-12 12:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/cybersikkerhet>
+{'extracted_url': 'https://www.uia.no/studier/cybersikkerhet'}
+2020-04-12 12:34:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/elektronikk-ingenioerfag> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/elektronikk-ingenioerfag>
+{'extracted_url': 'https://www.uia.no/studier/elektronikk-ingenioerfag'}
+2020-04-12 12:34:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/drama> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/data-ingenioerfag> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/drama>
+{'extracted_url': 'https://www.uia.no/studier/drama'}
+2020-04-12 12:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/data-ingenioerfag>
+{'extracted_url': 'https://www.uia.no/studier/data-ingenioerfag'}
+2020-04-12 12:34:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/bygg-sivilingenioer> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/bygg-sivilingenioer>
+{'extracted_url': 'https://www.uia.no/studier/bygg-sivilingenioer'}
+2020-04-12 12:34:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/elektronisk-musikk> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/engelsk3> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/elektronisk-musikk>
+{'extracted_url': 'https://www.uia.no/studier/elektronisk-musikk'}
+2020-04-12 12:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/engelsk3>
+{'extracted_url': 'https://www.uia.no/studier/engelsk3'}
+2020-04-12 12:34:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/engelsk2> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/engelsk2>
+{'extracted_url': 'https://www.uia.no/studier/engelsk2'}
+2020-04-12 12:34:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/engelsk> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/engelsk>
+{'extracted_url': 'https://www.uia.no/studier/engelsk'}
+2020-04-12 12:34:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search/(offset)/40?Search=&SearchText=&Format=json> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search/(offset)/40?Search=&SearchText=&Format=json>
+{'extracted_url': 'https://www.uia.no/study/search/(offset)/40?Search=&SearchText=&Format=json'}
+2020-04-12 12:34:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier/ernaering2> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier/ernaering2>
+{'extracted_url': 'https://www.uia.no/studier/ernaering2'}
+2020-04-12 12:34:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search/(offset)/60?Search=&SearchText=&Format=json> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search/(offset)/20?Search=&SearchText=&Format=json> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search/(offset)/60?Search=&SearchText=&Format=json>
+{'extracted_url': 'https://www.uia.no/study/search/(offset)/60?Search=&SearchText=&Format=json'}
+2020-04-12 12:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search/(offset)/20?Search=&SearchText=&Format=json>
+{'extracted_url': 'https://www.uia.no/study/search/(offset)/20?Search=&SearchText=&Format=json'}
+2020-04-12 12:34:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search/(offset)/120?Search=&SearchText=&Format=json> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search/(offset)/120?Search=&SearchText=&Format=json>
+{'extracted_url': 'https://www.uia.no/study/search/(offset)/120?Search=&SearchText=&Format=json'}
+2020-04-12 12:34:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search/(offset)/100?Search=&SearchText=&Format=json> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search/(offset)/100?Search=&SearchText=&Format=json>
+{'extracted_url': 'https://www.uia.no/study/search/(offset)/100?Search=&SearchText=&Format=json'}
+2020-04-12 12:34:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search/(offset)/80?Search=&SearchText=&Format=json> (referer: https://www.uia.no/study/search)
+2020-04-12 12:34:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search/(offset)/80?Search=&SearchText=&Format=json>
+{'extracted_url': 'https://www.uia.no/study/search/(offset)/80?Search=&SearchText=&Format=json'}
+2020-04-12 12:34:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/collaboration2> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:34:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/collaboration2>
+{'extracted_url': 'https://www.uia.no/en/collaboration2'}
+2020-04-12 12:35:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/uia-karriere/karrierearrangementer> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/uia-karriere/karrierearrangementer>
+{'extracted_url': 'https://www.uia.no/student/uia-karriere/karrierearrangementer'}
+2020-04-12 12:35:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/samarbeid/samfunnskontakt/forskningssamarbeid> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/samarbeid/samfunnskontakt/forskningssamarbeid>
+{'extracted_url': 'https://www.uia.no/samarbeid/samfunnskontakt/forskningssamarbeid'}
+2020-04-12 12:35:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/kk/profil/elis> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/kk/profil/elis>
+{'extracted_url': 'https://www.uia.no/kk/profil/elis'}
+2020-04-12 12:35:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/kk/profil/rachelfs> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/kk/profil/rachelfs>
+{'extracted_url': 'https://www.uia.no/kk/profil/rachelfs'}
+2020-04-12 12:35:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/uia-magasinet/magasinartikler/om-faa-aar-kan-matteboekene-vaere-borte> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyskaping> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/uia-magasinet/magasinartikler/om-faa-aar-kan-matteboekene-vaere-borte>
+{'extracted_url': 'https://www.uia.no/om-uia/uia-magasinet/magasinartikler/om-faa-aar-kan-matteboekene-vaere-borte'}
+2020-04-12 12:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyskaping>
+{'extracted_url': 'https://www.uia.no/nyskaping'}
+2020-04-12 12:35:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/senter-og-nettverk/senter-for-entreprenoerskap-og-sosial-innovasjon/uia-colab> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/senter-og-nettverk/senter-for-entreprenoerskap-og-sosial-innovasjon/uia-colab>
+{'extracted_url': 'https://www.uia.no/senter-og-nettverk/senter-for-entreprenoerskap-og-sosial-innovasjon/uia-colab'}
+2020-04-12 12:35:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/uia-magasinet/magasinartikler/vi-er-smartere-sikrere-og-sterkere> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/uia-magasinet/magasinartikler/vi-er-smartere-sikrere-og-sterkere>
+{'extracted_url': 'https://www.uia.no/om-uia/uia-magasinet/magasinartikler/vi-er-smartere-sikrere-og-sterkere'}
+2020-04-12 12:35:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/uia-magasinet/magasinartikler/finner-muligheter-i-det-blaa> (referer: https://www.uia.no/samarbeid)
+2020-04-12 12:35:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/uia-magasinet/magasinartikler/finner-muligheter-i-det-blaa>
+{'extracted_url': 'https://www.uia.no/om-uia/uia-magasinet/magasinartikler/finner-muligheter-i-det-blaa'}
+2020-04-12 12:35:04 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 37972,
+ 'downloader/request_count': 136,
+ 'downloader/request_method_count/GET': 136,
+ 'downloader/response_bytes': 6936456,
+ 'downloader/response_count': 136,
+ 'downloader/response_status_count/200': 130,
+ 'downloader/response_status_count/301': 1,
+ 'downloader/response_status_count/302': 4,
+ 'downloader/response_status_count/403': 1,
+ 'dupefilter/filtered': 2647,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2020, 4, 12, 12, 35, 4, 326433),
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'item_scraped_count': 129,
+ 'log_count/DEBUG': 274,
+ 'log_count/INFO': 9,
+ 'memusage/max': 100261888,
+ 'memusage/startup': 80007168,
+ 'offsite/domains': 4,
+ 'offsite/filtered': 53,
+ 'request_depth_max': 3,
+ 'response_received_count': 131,
+ 'scheduler/dequeued': 136,
+ 'scheduler/dequeued/memory': 136,
+ 'scheduler/enqueued': 1223,
+ 'scheduler/enqueued/memory': 1223,
+ 'start_time': datetime.datetime(2020, 4, 12, 12, 33, 47, 290535)}
+2020-04-12 12:35:04 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)

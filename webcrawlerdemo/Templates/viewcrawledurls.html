@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+<h2>Time To Crawl : {{ time_to_crawl.time_to_crawl }}</h2>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Site Name</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for item in details %}
+
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a href="{{ item.site_name }}">{{ item.text }}</a></td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+{% endblock content %}

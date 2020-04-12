@@ -1,0 +1,77 @@
+
+version: '3'
+
+services:
+
+  django_app:
+    build: webcrawlerdemo/.
+    container_name: django_app
+    volumes:
+      - ./webcrawlerdemo:/webcrawlerapp
+    command: sh -c "python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000"
+    env_file:
+      - ./webcrawlerdemo/.env
+    ports:
+        - "8000:8000"
+    restart: on-failure
+    depends_on:
+      - web
+      - postgres
+    networks:
+      main:
+    links:
+      - web
+
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    restart: on-failure
+    networks:
+      main:
+    volumes:
+      - ./webcrawlerdemo/postgresql-data:/var/lib/postgresql/data
+
+  web:
+    build: customcrawler/.
+    command: bash -c "scrapyd"
+    container_name: scrapyd_service
+    volumes:
+      - ./customcrawler:/scrapyd_service
+    ports:
+      - "5001:6800"
+    image: scrapyd_service-image
+    networks:
+      main:
+    restart: on-failure
+
+  rabbitmq:
+    container_name: rabbitmq
+    hostname: rabbitmq
+    image: rabbitmq:3-management
+    networks:
+      main:
+    restart: on-failure
+
+  worker:
+      command: bash -c "celery -A customcrawler worker -l info"
+      container_name: celeryworker
+      image: scrapyd_service-image
+      depends_on:
+        - web
+        - rabbitmq
+      networks:
+        main:
+      restart: on-failure
+
+networks:
+  main:
+
+    # docker-compose up --scale worker=5 Use this to scale up workers
+    # command: bash -c "celery -A customcrawler worker -c 4 -l info"
