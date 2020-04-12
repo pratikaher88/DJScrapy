@@ -1,6 +1,6 @@
 from uuid import uuid4
 from urllib.parse import urlparse
-from django.core.validators import URLValidator
+# from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 from django.views.decorators.http import require_POST, require_http_methods
 from django.shortcuts import render
@@ -19,14 +19,14 @@ from random import randint
 # from main.models import ScrapyItem
 from main.models import URL_Details,TimeToCrawl
 
-def is_valid_url(url):
-    validate = URLValidator()
-    try:
-        validate(url)  # check if url format is valid
-    except ValidationError:
-        return False
+# def is_valid_url(url):
+#     validate = URLValidator()
+#     try:
+#         validate(url)  # check if url format is valid
+#     except ValidationError:
+#         return False
 
-    return True
+#     return True
 
 
 
