@@ -35,8 +35,8 @@ services:
     restart: on-failure
     networks:
       main:
-    volumes:
-      - ./webcrawlerdemo/postgresql-data:/var/lib/postgresql/data
+    # volumes:
+    #   - ./webcrawlerdemo/postgresql-data:/var/lib/postgresql/data
 
   web:
     build: customcrawler/.
