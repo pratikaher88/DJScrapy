@@ -1,5 +1,4 @@
-from sqlalchemy import create_engine, Column, Table, ForeignKey, MetaData
-from sqlalchemy.orm import relationship
+from sqlalchemy import create_engine, Column
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (
     Integer, String, Date, DateTime, Float, Boolean, Text)
@@ -12,12 +11,12 @@ def db_connect():
     return create_engine(get_project_settings().get("DATABASE_URL"))
 
 
-class Quote(Base):
-    __tablename__ = "main_quote"
+# class Quote(Base):
+#     __tablename__ = "main_quote"
 
-    id = Column(Integer, primary_key=True)
-    url_content = Column('text', Text())
-    job_data_id = Column('job_data_id', Integer())
+#     id = Column(Integer, primary_key=True)
+#     url_content = Column('text', Text())
+#     job_data_id = Column('job_data_id', Integer())
 
 
 class URL_details(Base):

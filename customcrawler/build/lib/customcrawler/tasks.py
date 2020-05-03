@@ -5,10 +5,10 @@ from customcrawler.retry_mechanism import retry_session
 from customcrawler.models import URL_details
 from sqlalchemy.orm import sessionmaker
 from customcrawler.models import db_connect
+from customcrawler.settings import AXE_CHECKER_URL,CELERY_BROKER_URL
 
-
-
-app = Celery('customcrawler', broker='amqp://')
+app = Celery('customcrawler', broker=CELERY_BROKER_URL)
+# app = Celery('customcrawler',broker='amqp://admin:mypass@rabbitmq:5672',backend='rpc://')
 app.config_from_object(celeryconfig)
 
 session_retry = retry_session(retries=5)
@@ -24,7 +24,7 @@ class ProcessTask(object):
 
     def run(self, base_url, job_data_id):
 
-        url = "http://axe.checkers.eiii.eu/export-jsonld/pagecheck2.0/?url=" + base_url
+        url = AXE_CHECKER_URL + base_url
         
         r = session_retry.get(url=url, headers=headers)
 
@@ -52,12 +52,6 @@ class ProcessTask(object):
 
                 total_pass += len(passes['nodes'])
 
-        
-    
-    # def on_success(self, retval, task_id, *args, **kwargs):
-
-        # print("TASK ID", task_id)
-
         session = self.Session()
 
         url_details = URL_details()
@@ -84,7 +78,7 @@ class ProcessTask(object):
 
         session.close()
 
-        print("TOTAL",base_url, job_data_id)
+        print(base_url, job_data_id)
 
 
 @app.task

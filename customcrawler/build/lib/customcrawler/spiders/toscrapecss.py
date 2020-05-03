@@ -2,7 +2,6 @@
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
-from scrapy import signals
 from urllib.parse import urlparse
 
 import re
