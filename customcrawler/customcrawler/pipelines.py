@@ -73,9 +73,9 @@ class ScrapyAppPipeline(object):
 
         print(self.reservoir)
 
-        # for value in self.reservoir:
-        #     if value:
-        #         process_urls_async.delay(value, spider.job_data_id)
+        for value in self.reservoir:
+            if value:
+                process_urls_async.delay(value, spider.job_data_id)
 
 
         # work_time = datetime.now() - spider.started_on (Time to Crawl)
