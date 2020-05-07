@@ -17,7 +17,7 @@ class ScrapyAppPipeline(object):
         engine = db_connect()
         self.Session = sessionmaker(bind=engine)
         self.item_scraped_count = 0
-        self.reservoir = [False]*100
+        self.reservoir = [False]*600
         # self.reservoir_size = 600
 
 
@@ -44,16 +44,16 @@ class ScrapyAppPipeline(object):
     def process_item(self, item, spider):
 
 
-        if self.item_scraped_count < 100:
+        if self.item_scraped_count < 600:
             
             self.reservoir[self.item_scraped_count] = item['extracted_url']
 
 
-        if self.item_scraped_count< 600:
+        elif self.item_scraped_count < 6000:
 
             j = random.randrange(self.item_scraped_count + 1)
 
-            if j < 100:
+            if j < 600:
                 self.reservoir[j] = item['extracted_url']
 
         self.item_scraped_count+=1
