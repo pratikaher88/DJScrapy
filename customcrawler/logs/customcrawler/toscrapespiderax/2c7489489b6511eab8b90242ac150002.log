@@ -801,3 +801,7 @@
 2020-05-21 13:30:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
 2020-05-21 13:30:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
 2020-05-21 13:30:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:31:27 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/lover?sort=alpha HTTP/1.1" 504 182
+2020-05-21 13:31:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:31:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:31:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
