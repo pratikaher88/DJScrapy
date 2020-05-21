@@ -22,7 +22,13 @@ class ProcessTask(object):
         engine = db_connect()
         self.Session = sessionmaker(bind=engine)
 
-    def run(self, base_url, job_data_id):
+    def run(self, reservoir, job_data_id):
+
+        job = group((self.app.signature(self.axe_checker, (url,.job_data_id)) for url in reservoir))  
+
+        return job.delay()
+
+    def axe_checker(self, base_url, job_data_id):
 
         url = AXE_CHECKER_URL + base_url
         

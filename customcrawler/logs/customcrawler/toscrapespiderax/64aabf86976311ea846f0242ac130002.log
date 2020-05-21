@@ -1,0 +1,458 @@
+2020-05-16 10:52:56 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: customcrawler)
+2020-05-16 10:52:56 [scrapy.utils.log] INFO: Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.6.10 (default, Mar 31 2020, 16:24:51) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.9.93-linuxkit-aufs-x86_64-with-debian-10.3
+2020-05-16 10:52:56 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'customcrawler', 'CLOSESPIDER_PAGECOUNT': '100', 'CLOSESPIDER_TIMEOUT': '0', 'CONCURRENT_REQUESTS': 32, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/customcrawler/toscrapespiderax/64aabf86976311ea846f0242ac130002.log', 'NEWSPIDER_MODULE': 'customcrawler.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['customcrawler.spiders']}
+2020-05-16 10:52:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-16 10:52:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-16 10:52:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-16 10:52:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['customcrawler.pipelines.ScrapyAppPipeline']
+2020-05-16 10:52:56 [scrapy.core.engine] INFO: Spider opened
+2020-05-16 10:52:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-16 10:52:56 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2020-05-16 10:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/> (referer: None)
+2020-05-16 10:53:05 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://lovdata.no/info/personvern> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-05-16 10:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/personvern#cookies> (referer: https://lovdata.no/)
+2020-05-16 10:53:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/personvern>
+{'extracted_url': 'https://lovdata.no/info/personvern'}
+2020-05-16 10:53:05 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://grunnloven.lovdata.no/> from <GET http://grunnloven.lovdata.no>
+2020-05-16 10:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/dommer> (referer: https://lovdata.no/)
+2020-05-16 10:53:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/dommer>
+{'extracted_url': 'https://lovdata.no/register/dommer'}
+2020-05-16 10:53:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler'}
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/eosAvtalen> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/forskrifter> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://lovdata.no/dokument/SPH/sph-2020> from <GET https://lovdata.no/sph>
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/traktater> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lokaleForskrifter> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/stortingsvedtak> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lover> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/eosAvtalen>
+{'extracted_url': 'https://lovdata.no/register/eosAvtalen'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/forskrifter>
+{'extracted_url': 'https://lovdata.no/register/forskrifter'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend>
+{'extracted_url': 'https://lovdata.no/register/lovtidend'}
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/loverEngelsk> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/forskrifterEngelsk> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/dommerEngelsk> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/tjenester/pro/> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/publikasjoner> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/tjenester/varsling> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/tjenester/tidsskrift> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/traktater>
+{'extracted_url': 'https://lovdata.no/register/traktater'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lokaleForskrifter>
+{'extracted_url': 'https://lovdata.no/register/lokaleForskrifter'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/stortingsvedtak>
+{'extracted_url': 'https://lovdata.no/register/stortingsvedtak'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lover>
+{'extracted_url': 'https://lovdata.no/register/lover'}
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/pro/auth/student> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/api> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/loverEngelsk>
+{'extracted_url': 'https://lovdata.no/register/loverEngelsk'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/forskrifterEngelsk>
+{'extracted_url': 'https://lovdata.no/register/forskrifterEngelsk'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/dommerEngelsk>
+{'extracted_url': 'https://lovdata.no/register/dommerEngelsk'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/tjenester/pro/>
+{'extracted_url': 'https://lovdata.no/tjenester/pro/'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/publikasjoner>
+{'extracted_url': 'https://lovdata.no/publikasjoner'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/tjenester/varsling>
+{'extracted_url': 'https://lovdata.no/tjenester/varsling'}
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/advokater/> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/22juli> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/om_lovdata> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/brukeravtale> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/kontakt> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/redaktoransvar> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/tjenester/tidsskrift>
+{'extracted_url': 'https://lovdata.no/tjenester/tidsskrift'}
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/rss> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/pro/auth/student>
+{'extracted_url': 'https://lovdata.no/pro/auth/student'}
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/api>
+{'extracted_url': 'https://lovdata.no/info/api'}
+2020-05-16 10:53:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/lenker> (referer: https://lovdata.no/)
+2020-05-16 10:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/advokater/>
+{'extracted_url': 'https://lovdata.no/advokater/'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/22juli>
+{'extracted_url': 'https://lovdata.no/info/22juli'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/om_lovdata>
+{'extracted_url': 'https://lovdata.no/info/om_lovdata'}
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/2008-06-27-71> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/eli/> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/eksamen> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://lovdata.no/pro/> from <GET https://lovdata.no/pro>
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/1997-02-28-19> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/2005-05-20-28> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/brukeravtale>
+{'extracted_url': 'https://lovdata.no/info/brukeravtale'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/kontakt>
+{'extracted_url': 'https://lovdata.no/info/kontakt'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/redaktoransvar>
+{'extracted_url': 'https://lovdata.no/info/redaktoransvar'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/rss>
+{'extracted_url': 'https://lovdata.no/info/rss'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/lenker>
+{'extracted_url': 'https://lovdata.no/info/lenker'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/2008-06-27-71>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/2008-06-27-71'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/eli/>
+{'extracted_url': 'https://lovdata.no/eli/'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/eksamen>
+{'extracted_url': 'https://lovdata.no/info/eksamen'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/>
+{'extracted_url': 'https://lovdata.no/'}
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_12__mai_2020/2704> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_29__april_2020/2699> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_7__mai_2020/2702> (referer: https://lovdata.no/)
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/1997-02-28-19>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/1997-02-28-19'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/2005-05-20-28>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/2005-05-20-28'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_12__mai_2020/2704>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_12__mai_2020/2704'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_29__april_2020/2699>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_29__april_2020/2699'}
+2020-05-16 10:53:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_7__mai_2020/2702>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_7__mai_2020/2702'}
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_17__april_2020/2696> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1013> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_24__april_2020/2698> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_17__april_2020/2696>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_17__april_2020/2696'}
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1013>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1013'}
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_24__april_2020/2698>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_24__april_2020/2698'}
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1011> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1012> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1010> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1011>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1011'}
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1012>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1012'}
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1010>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1010'}
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1009> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2020-64419> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1001-a> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1009>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-14-1009'}
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/1997-06-13-44> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2020-64419>
+{'extracted_url': 'https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2020-64419'}
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1001-a>
+{'extracted_url': 'https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1001-a'}
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2019-144552> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-980-u> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LHSIV/avgjorelse/lh-2019-151019> (referer: https://lovdata.no/)
+2020-05-16 10:53:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/1997-06-13-44>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/1997-06-13-44'}
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2019-144552>
+{'extracted_url': 'https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2019-144552'}
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-980-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-980-u'}
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LHSIV/avgjorelse/lh-2019-151019>
+{'extracted_url': 'https://lovdata.no/dokument/LHSIV/avgjorelse/lh-2019-151019'}
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/information_in_english> (referer: https://lovdata.no/)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/om_emdn> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/om_lagmannsrettens_rettskraft> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/information_in_english>
+{'extracted_url': 'https://lovdata.no/info/information_in_english'}
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/om_emdn>
+{'extracted_url': 'https://lovdata.no/info/om_emdn'}
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/om_lagmannsrettens_rettskraft>
+{'extracted_url': 'https://lovdata.no/info/om_lagmannsrettens_rettskraft'}
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/faq> (referer: https://lovdata.no/)
+2020-05-16 10:53:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://lovdata.no/pro/auth/login> from <GET https://lovdata.no/pro/>
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-54734> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://grunnloven.lovdata.no/> (referer: None)
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/faq>
+{'extracted_url': 'https://lovdata.no/info/faq'}
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-54734>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-54734'}
+2020-05-16 10:53:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://lovdata.no/pro/> from <GET http://lovdata.no/pro/#registry/chronological/AVG/2020>
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://grunnloven.lovdata.no/>
+{'extracted_url': 'https://grunnloven.lovdata.no/'}
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-1317> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-29194> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-1317>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-1317'}
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/SPH/sph-2020> (referer: https://lovdata.no/)
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-29194>
+{'extracted_url': 'https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-29194'}
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2019-79032> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2017-190659> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-51346> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikler> (referer: https://lovdata.no/)
+2020-05-16 10:53:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LESIV/avgjorelse/le-2020-55841> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/SPH/sph-2020>
+{'extracted_url': 'https://lovdata.no/dokument/SPH/sph-2020'}
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/1999-03-26-14> (referer: https://lovdata.no/)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-976-a> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-59000> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-972-u> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-969-u> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2019-79032>
+{'extracted_url': 'https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2019-79032'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2017-190659>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2017-190659'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-51346>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-51346'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikler>
+{'extracted_url': 'https://lovdata.no/artikler'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LESIV/avgjorelse/le-2020-55841>
+{'extracted_url': 'https://lovdata.no/dokument/LESIV/avgjorelse/le-2020-55841'}
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-964-u> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/1999-03-26-14>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/1999-03-26-14'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-976-a>
+{'extracted_url': 'https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-976-a'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-59000>
+{'extracted_url': 'https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-59000'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-972-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-972-u'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-969-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-969-u'}
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler?sort=alpha> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-979-u> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LESTR/avgjorelse/le-2020-29200> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-964-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-964-u'}
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler?dir=asc> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2019-527> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-966-u> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler?sort=alpha>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler?sort=alpha'}
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-515> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-979-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-979-u'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LESTR/avgjorelse/le-2020-29200>
+{'extracted_url': 'https://lovdata.no/dokument/LESTR/avgjorelse/le-2020-29200'}
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARH/tariff/tarh-2018-514> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-516> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler?dir=asc>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler?dir=asc'}
+2020-05-16 10:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2019-527>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2019-527'}
+2020-05-16 10:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-966-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-966-u'}
+2020-05-16 10:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-515>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-515'}
+2020-05-16 10:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-330> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/2005-06-17-62> (referer: https://lovdata.no/)
+2020-05-16 10:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARH/tariff/tarh-2018-514>
+{'extracted_url': 'https://lovdata.no/dokument/TARH/tariff/tarh-2018-514'}
+2020-05-16 10:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-516>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-516'}
+2020-05-16 10:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-330>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-330'}
+2020-05-16 10:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/2005-06-17-62>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/2005-06-17-62'}
+2020-05-16 10:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/dommer?offset=20> (referer: https://lovdata.no/register/dommer)
+2020-05-16 10:53:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/dommer?offset=20>
+{'extracted_url': 'https://lovdata.no/register/dommer?offset=20'}
+2020-05-16 10:53:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-505> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-505>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-505'}
+2020-05-16 10:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-520> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-243> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-211> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-520>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-520'}
+2020-05-16 10:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-243>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-243'}
+2020-05-16 10:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-211>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-211'}
+2020-05-16 10:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-519> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-271> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-519>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-519'}
+2020-05-16 10:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-272> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-510> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-271>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-271'}
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-452> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-272>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-272'}
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-208> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-453> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler?offset=20> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-510>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-510'}
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-452>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-452'}
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-208>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-208'}
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-453>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-453'}
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler?offset=20>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler?offset=20'}
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-512> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v4> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v3> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1'}
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-466> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v7> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:13 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2020-05-16 10:53:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v6> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-512>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-512'}
+2020-05-16 10:53:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v4>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v4'}
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v3>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v3'}
+2020-05-16 10:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v5> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v8> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-466>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-466'}
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v7>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v7'}
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v6>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v6'}
+2020-05-16 10:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v10> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-390> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v5>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v5'}
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v8>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v8'}
+2020-05-16 10:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v12> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v10>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v10'}
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-390>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-390'}
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v12>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v12'}
+2020-05-16 10:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v14> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v15> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v14>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v14'}
+2020-05-16 10:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v15>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v15'}
+2020-05-16 10:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v17> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v16> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v17>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v17'}
+2020-05-16 10:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v16>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v16'}
+2020-05-16 10:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v19> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v19>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v19'}
+2020-05-16 10:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v18> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v18>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v18'}
+2020-05-16 10:53:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v11> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v11>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v11'}
+2020-05-16 10:53:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v2> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-284> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-16 10:53:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v21> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v20> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v2>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v2'}
+2020-05-16 10:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v22> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p1> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p2> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p3> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v9> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p4> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-284>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-284'}
+2020-05-16 10:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v1> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v21>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v21'}
+2020-05-16 10:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v20>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v20'}
+2020-05-16 10:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p5> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p9> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p6> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p7> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p8> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p10> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v22>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v22'}
+2020-05-16 10:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p1>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p1'}
+2020-05-16 10:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p2>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p2'}
+2020-05-16 10:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p3>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p3'}
+2020-05-16 10:53:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v9>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v9'}
+2020-05-16 10:53:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p4>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p4'}
+2020-05-16 10:53:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v1>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v1'}
+2020-05-16 10:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p5>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p5'}
+2020-05-16 10:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p9>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p9'}
+2020-05-16 10:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p6>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p6'}
+2020-05-16 10:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p7>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p7'}
+2020-05-16 10:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p8>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p8'}
+2020-05-16 10:53:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p10>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-p10'}
+2020-05-16 10:53:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v13> (referer: https://lovdata.no/register/eosAvtalen)
+2020-05-16 10:53:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v13>
+{'extracted_url': 'https://lovdata.no/dokument/NLX2/avtale/avt-1992-05-02-1-v13'}
+2020-05-16 10:53:24 [amqp] DEBUG: Start from server, version: 0.9, properties: {'capabilities': {'publisher_confirms': True, 'exchange_exchange_bindings': True, 'basic.nack': True, 'consumer_cancel_notify': True, 'connection.blocked': True, 'consumer_priorities': True, 'authentication_failure_close': True, 'per_consumer_qos': True, 'direct_reply_to': True}, 'cluster_name': 'rabbit@rabbitmq', 'copyright': 'Copyright (c) 2007-2020 Pivotal Software, Inc.', 'information': 'Licensed under the MPL 1.1. Website: https://rabbitmq.com', 'platform': 'Erlang/OTP 22.3.2', 'product': 'RabbitMQ', 'version': '3.8.3'}, mechanisms: [b'AMQPLAIN', b'PLAIN'], locales: ['en_US']
+2020-05-16 10:53:24 [amqp] DEBUG: using channel_id: 1
+2020-05-16 10:53:24 [amqp] DEBUG: Channel open
+2020-05-16 10:53:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 49087,
+ 'downloader/request_count': 136,
+ 'downloader/request_method_count/GET': 136,
+ 'downloader/response_bytes': 3808137,
+ 'downloader/response_count': 136,
+ 'downloader/response_status_count/200': 131,
+ 'downloader/response_status_count/301': 3,
+ 'downloader/response_status_count/302': 2,
+ 'dupefilter/filtered': 5438,
+ 'finish_reason': 'closespider_pagecount',
+ 'finish_time': datetime.datetime(2020, 5, 16, 10, 53, 24, 464172),
+ 'item_scraped_count': 130,
+ 'log_count/DEBUG': 271,
+ 'log_count/INFO': 7,
+ 'memusage/max': 80433152,
+ 'memusage/startup': 80433152,
+ 'request_depth_max': 3,
+ 'response_received_count': 131,
+ 'scheduler/dequeued': 136,
+ 'scheduler/dequeued/memory': 136,
+ 'scheduler/enqueued': 16001,
+ 'scheduler/enqueued/memory': 16001,
+ 'start_time': datetime.datetime(2020, 5, 16, 10, 52, 56, 526561)}
+2020-05-16 10:53:24 [scrapy.core.engine] INFO: Spider closed (closespider_pagecount)

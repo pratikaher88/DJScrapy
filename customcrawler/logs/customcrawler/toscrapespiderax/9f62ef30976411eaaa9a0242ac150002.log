@@ -1,0 +1,147 @@
+2020-05-16 11:01:44 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: customcrawler)
+2020-05-16 11:01:44 [scrapy.utils.log] INFO: Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.6.10 (default, Mar 31 2020, 16:24:51) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.9.93-linuxkit-aufs-x86_64-with-debian-10.3
+2020-05-16 11:01:44 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'customcrawler', 'CLOSESPIDER_PAGECOUNT': '100', 'CLOSESPIDER_TIMEOUT': '0', 'CONCURRENT_REQUESTS': 32, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/customcrawler/toscrapespiderax/9f62ef30976411eaaa9a0242ac150002.log', 'NEWSPIDER_MODULE': 'customcrawler.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['customcrawler.spiders']}
+2020-05-16 11:01:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-16 11:01:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-16 11:01:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-16 11:01:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['customcrawler.pipelines.ScrapyAppPipeline']
+2020-05-16 11:01:44 [scrapy.core.engine] INFO: Spider opened
+2020-05-16 11:01:44 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2020-05-16 11:01:44 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.DiskFull: could not extend file "base/13408/16585": No space left on device
+HINT:  Check free disk space.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/scrapy/crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+sqlalchemy.exc.OperationalError: (psycopg2.errors.DiskFull) could not extend file "base/13408/16585": No space left on device
+HINT:  Check free disk space.
+
+[SQL: TRUNCATE TABLE main_url_details]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.DiskFull: could not extend file "base/13408/16564": No space left on device
+HINT:  Check free disk space.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/scrapyd_service/customcrawler/pipelines.py", line 103, in close_spider
+    session.commit()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1027, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 494, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 473, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2470, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2608, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2568, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
+    statement, params
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (psycopg2.errors.DiskFull) could not extend file "base/13408/16564": No space left on device
+HINT:  Check free disk space.
+
+[SQL: INSERT INTO main_timetocrawl (job_data_id, domain_name, time_to_crawl) VALUES (%(job_data_id)s, %(domain_name)s, %(time_to_crawl)s) RETURNING main_timetocrawl.id]
+[parameters: {'job_data_id': '29925', 'domain_name': 'www.uia.no', 'time_to_crawl': datetime.timedelta(0, 0, 21139)}]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-05-16 11:01:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2020, 5, 16, 11, 1, 44, 332230),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 6}
+2020-05-16 11:01:44 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2020-05-16 11:01:44 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-05-16 11:01:44 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/usr/local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.DiskFull: could not extend file "base/13408/16585": No space left on device
+HINT:  Check free disk space.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/usr/local/lib/python3.6/site-packages/scrapy/crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+sqlalchemy.exc.OperationalError: (psycopg2.errors.DiskFull) could not extend file "base/13408/16585": No space left on device
+HINT:  Check free disk space.
+
+[SQL: TRUNCATE TABLE main_url_details]
+(Background on this error at: http://sqlalche.me/e/e3q8)

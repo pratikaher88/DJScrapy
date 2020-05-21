@@ -60,7 +60,7 @@ services:
     restart: on-failure
 
   worker:
-      command: bash -c "celery -A customcrawler worker -l info"
+      command: bash -c "celery -A customcrawler worker -l info --concurrency=10 -n worker1@%h "
       container_name: celeryworker
       image: scrapyd_service-image
       depends_on:

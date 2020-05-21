@@ -1,0 +1,803 @@
+2020-05-21 13:15:50 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: customcrawler)
+2020-05-21 13:15:50 [scrapy.utils.log] INFO: Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.6.10 (default, Mar 31 2020, 16:24:51) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.9.93-linuxkit-aufs-x86_64-with-debian-10.3
+2020-05-21 13:15:50 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'customcrawler', 'CLOSESPIDER_PAGECOUNT': '100', 'CLOSESPIDER_TIMEOUT': '0', 'CONCURRENT_REQUESTS': 32, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/customcrawler/toscrapespiderax/2c7489489b6511eab8b90242ac150002.log', 'NEWSPIDER_MODULE': 'customcrawler.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['customcrawler.spiders']}
+2020-05-21 13:15:50 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-21 13:15:50 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-21 13:15:50 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-21 13:15:50 [scrapy.middleware] INFO: Enabled item pipelines:
+['customcrawler.pipelines.ScrapyAppPipeline']
+2020-05-21 13:15:50 [scrapy.core.engine] INFO: Spider opened
+2020-05-21 13:15:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-21 13:15:51 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2020-05-21 13:15:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/> (referer: None)
+2020-05-21 13:15:53 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://lovdata.no/info/personvern> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-05-21 13:15:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/personvern#cookies> (referer: https://lovdata.no/)
+2020-05-21 13:15:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/personvern>
+{'extracted_url': 'https://lovdata.no/info/personvern'}
+2020-05-21 13:15:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/dommer> (referer: https://lovdata.no/)
+2020-05-21 13:15:53 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://grunnloven.lovdata.no/> from <GET http://grunnloven.lovdata.no>
+2020-05-21 13:15:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/dommer>
+{'extracted_url': 'https://lovdata.no/register/dommer'}
+2020-05-21 13:15:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler> (referer: https://lovdata.no/)
+2020-05-21 13:15:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler'}
+2020-05-21 13:15:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://lovdata.no/dokument/SPH/sph-2020> from <GET https://lovdata.no/sph>
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lover> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/traktater> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/forskrifter> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lokaleForskrifter> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/stortingsvedtak> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/eosAvtalen> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/loverEngelsk> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/forskrifterEngelsk> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lover>
+{'extracted_url': 'https://lovdata.no/register/lover'}
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend>
+{'extracted_url': 'https://lovdata.no/register/lovtidend'}
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/traktater>
+{'extracted_url': 'https://lovdata.no/register/traktater'}
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/forskrifter>
+{'extracted_url': 'https://lovdata.no/register/forskrifter'}
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lokaleForskrifter>
+{'extracted_url': 'https://lovdata.no/register/lokaleForskrifter'}
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/stortingsvedtak>
+{'extracted_url': 'https://lovdata.no/register/stortingsvedtak'}
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/eosAvtalen>
+{'extracted_url': 'https://lovdata.no/register/eosAvtalen'}
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/loverEngelsk>
+{'extracted_url': 'https://lovdata.no/register/loverEngelsk'}
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/tjenester/varsling> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/forskrifterEngelsk>
+{'extracted_url': 'https://lovdata.no/register/forskrifterEngelsk'}
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/advokater/> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/dommerEngelsk> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/api> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/tjenester/pro/> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/publikasjoner> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/tjenester/tidsskrift> (referer: https://lovdata.no/)
+2020-05-21 13:15:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/pro/auth/student> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/tjenester/varsling>
+{'extracted_url': 'https://lovdata.no/tjenester/varsling'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/advokater/>
+{'extracted_url': 'https://lovdata.no/advokater/'}
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/om_lovdata> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/brukeravtale> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/kontakt> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/redaktoransvar> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/rss> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/lenker> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/eli/> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/22juli> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/dommerEngelsk>
+{'extracted_url': 'https://lovdata.no/register/dommerEngelsk'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/api>
+{'extracted_url': 'https://lovdata.no/info/api'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/tjenester/pro/>
+{'extracted_url': 'https://lovdata.no/tjenester/pro/'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/publikasjoner>
+{'extracted_url': 'https://lovdata.no/publikasjoner'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/tjenester/tidsskrift>
+{'extracted_url': 'https://lovdata.no/tjenester/tidsskrift'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/pro/auth/student>
+{'extracted_url': 'https://lovdata.no/pro/auth/student'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/om_lovdata>
+{'extracted_url': 'https://lovdata.no/info/om_lovdata'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/brukeravtale>
+{'extracted_url': 'https://lovdata.no/info/brukeravtale'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/kontakt>
+{'extracted_url': 'https://lovdata.no/info/kontakt'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/redaktoransvar>
+{'extracted_url': 'https://lovdata.no/info/redaktoransvar'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/rss>
+{'extracted_url': 'https://lovdata.no/info/rss'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/lenker>
+{'extracted_url': 'https://lovdata.no/info/lenker'}
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/eksamen> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://lovdata.no/pro/> from <GET https://lovdata.no/pro>
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_20__mai_2020/2710> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/2008-06-27-71> (referer: https://lovdata.no/)
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/eli/>
+{'extracted_url': 'https://lovdata.no/eli/'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/22juli>
+{'extracted_url': 'https://lovdata.no/info/22juli'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/eksamen>
+{'extracted_url': 'https://lovdata.no/info/eksamen'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/>
+{'extracted_url': 'https://lovdata.no/'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_20__mai_2020/2710>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_20__mai_2020/2710'}
+2020-05-21 13:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/2008-06-27-71>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/2008-06-27-71'}
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/2005-05-20-28> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/1997-06-13-44> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikler> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_7__mai_2020/2702> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_12__mai_2020/2704> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/2005-05-20-28>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/2005-05-20-28'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/1997-06-13-44>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/1997-06-13-44'}
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/artikkel/statsrad_29__april_2020/2699> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1032> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1031> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1029> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1030> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://grunnloven.lovdata.no/> (referer: None)
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikler>
+{'extracted_url': 'https://lovdata.no/artikler'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_7__mai_2020/2702>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_7__mai_2020/2702'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_12__mai_2020/2704>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_12__mai_2020/2704'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/artikkel/statsrad_29__april_2020/2699>
+{'extracted_url': 'https://lovdata.no/artikkel/statsrad_29__april_2020/2699'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1032>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1032'}
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-05-11-1028> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2020-68999> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LHSIV/avgjorelse/lh-2019-181677> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-57339> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-56868> (referer: https://lovdata.no/)
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1031>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1031'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1029>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1029'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1030>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1030'}
+2020-05-21 13:15:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://grunnloven.lovdata.no/>
+{'extracted_url': 'https://grunnloven.lovdata.no/'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-05-11-1028>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-05-11-1028'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2020-68999>
+{'extracted_url': 'https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2020-68999'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LHSIV/avgjorelse/lh-2019-181677>
+{'extracted_url': 'https://lovdata.no/dokument/LHSIV/avgjorelse/lh-2019-181677'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-57339>
+{'extracted_url': 'https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-57339'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-56868>
+{'extracted_url': 'https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-56868'}
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-21210> (referer: https://lovdata.no/)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/information_in_english> (referer: https://lovdata.no/)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/faq> (referer: https://lovdata.no/)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/om_emdn> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/info/om_lagmannsrettens_rettskraft> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-21210>
+{'extracted_url': 'https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-21210'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/information_in_english>
+{'extracted_url': 'https://lovdata.no/info/information_in_english'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/faq>
+{'extracted_url': 'https://lovdata.no/info/faq'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/om_emdn>
+{'extracted_url': 'https://lovdata.no/info/om_emdn'}
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LASIV/avgjorelse/la-2020-50133> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1014-u> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://lovdata.no/pro/auth/login> from <GET https://lovdata.no/pro/>
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1013-u> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/info/om_lagmannsrettens_rettskraft>
+{'extracted_url': 'https://lovdata.no/info/om_lagmannsrettens_rettskraft'}
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/1997-02-28-19> (referer: https://lovdata.no/)
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LASIV/avgjorelse/la-2020-50133>
+{'extracted_url': 'https://lovdata.no/dokument/LASIV/avgjorelse/la-2020-50133'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1014-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1014-u'}
+2020-05-21 13:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1013-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1013-u'}
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2019-191278> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LESTR/avgjorelse/le-2020-66103> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-63844> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1012-u> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://lovdata.no/pro/> from <GET http://lovdata.no/pro/#registry/chronological/AVG/2020>
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/1997-02-28-19>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/1997-02-28-19'}
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-47675> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-42180> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-76011> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/NL/lov/2005-06-17-62> (referer: https://lovdata.no/)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-54734> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2019-191278>
+{'extracted_url': 'https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2019-191278'}
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LESTR/avgjorelse/le-2020-66103>
+{'extracted_url': 'https://lovdata.no/dokument/LESTR/avgjorelse/le-2020-66103'}
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-63844>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-63844'}
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1012-u>
+{'extracted_url': 'https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1012-u'}
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-48097> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-47675>
+{'extracted_url': 'https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-47675'}
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-42180>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-42180'}
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-76011>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-76011'}
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/NL/lov/2005-06-17-62>
+{'extracted_url': 'https://lovdata.no/dokument/NL/lov/2005-06-17-62'}
+2020-05-21 13:15:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-54734>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-54734'}
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-53743> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/SPH/sph-2020> (referer: https://lovdata.no/)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler?dir=asc> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2017-190659> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1001-a> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/dommer?offset=20> (referer: https://lovdata.no/register/dommer)
+2020-05-21 13:15:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler?sort=alpha> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-48097>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-48097'}
+2020-05-21 13:15:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2019-527> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-53743>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-53743'}
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/SPH/sph-2020>
+{'extracted_url': 'https://lovdata.no/dokument/SPH/sph-2020'}
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler?dir=asc>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler?dir=asc'}
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2017-190659>
+{'extracted_url': 'https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2017-190659'}
+2020-05-21 13:15:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARH/tariff/tarh-2018-514> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1001-a>
+{'extracted_url': 'https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1001-a'}
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/dommer?offset=20>
+{'extracted_url': 'https://lovdata.no/register/dommer?offset=20'}
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler?sort=alpha>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler?sort=alpha'}
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2019-527>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2019-527'}
+2020-05-21 13:15:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-515> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:15:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-284> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARH/tariff/tarh-2018-514>
+{'extracted_url': 'https://lovdata.no/dokument/TARH/tariff/tarh-2018-514'}
+2020-05-21 13:15:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-272> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-515>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-515'}
+2020-05-21 13:16:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-284>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-284'}
+2020-05-21 13:16:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-211> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-272>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-272'}
+2020-05-21 13:16:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-520> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-211>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-211'}
+2020-05-21 13:16:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-271> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-466> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-520>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-520'}
+2020-05-21 13:16:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-519> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-271>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-271'}
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-466>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-466'}
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-512> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-453> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-519>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-519'}
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-452> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-512>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-512'}
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-453>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-453'}
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-510> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-390> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-452>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-452'}
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/tariffavtaler?offset=20> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-510>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-510'}
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-390>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-390'}
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/ikkeSanksjonerteLover> (referer: https://lovdata.no/register/lover)
+2020-05-21 13:16:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-516> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/tariffavtaler?offset=20>
+{'extracted_url': 'https://lovdata.no/register/tariffavtaler?offset=20'}
+2020-05-21 13:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/ikkeSanksjonerteLover>
+{'extracted_url': 'https://lovdata.no/register/ikkeSanksjonerteLover'}
+2020-05-21 13:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-516>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-516'}
+2020-05-21 13:16:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lover?dir=asc> (referer: https://lovdata.no/register/lover)
+2020-05-21 13:16:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://lovdata.no/lovtidend/hefter/> from <GET https://lovdata.no/lovtidend/hefter>
+2020-05-21 13:16:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lover?sort=alpha> (referer: https://lovdata.no/register/lover)
+2020-05-21 13:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lover?dir=asc>
+{'extracted_url': 'https://lovdata.no/register/lover?dir=asc'}
+2020-05-21 13:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lover?sort=alpha>
+{'extracted_url': 'https://lovdata.no/register/lover?sort=alpha'}
+2020-05-21 13:16:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-208> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-505> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/lovtidend/kunngjoring> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/lovtidend/redaksjonen> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET http://lovdata.no/lovtidend/journal/> from <GET https://lovdata.no/lovtidend/journal>
+2020-05-21 13:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-208>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-208'}
+2020-05-21 13:16:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-505>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-505'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-03-19-1026> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2014.30#20.05.202014.30> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/lovtidend/kunngjoring>
+{'extracted_url': 'https://lovdata.no/lovtidend/kunngjoring'}
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/lovtidend/redaksjonen>
+{'extracted_url': 'https://lovdata.no/lovtidend/redaksjonen'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/lovtidend/signering> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-05-05-1027> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-03-19-1026>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-03-19-1026'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/opphevedeLover> (referer: https://lovdata.no/register/lover)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2014.30>
+{'extracted_url': 'https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2014.30'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2015.15#20.05.202015.15> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/lov/2020-05-20-43> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2012.00#20.05.202012.00> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/lovtidend/signering>
+{'extracted_url': 'https://lovdata.no/lovtidend/signering'}
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-05-05-1027>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-05-05-1027'}
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/opphevedeLover>
+{'extracted_url': 'https://lovdata.no/register/opphevedeLover'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-19-1025> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend?kunngjortDato=19.05.2020%20kl.%2015.20#19.05.202015.20> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2015.15>
+{'extracted_url': 'https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2015.15'}
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/lov/2020-05-20-43>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/lov/2020-05-20-43'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1023> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1024> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2012.00>
+{'extracted_url': 'https://lovdata.no/register/lovtidend?kunngjortDato=20.05.2020%20kl.%2012.00'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-330> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-19-1025>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-19-1025'}
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend?kunngjortDato=19.05.2020%20kl.%2015.20>
+{'extracted_url': 'https://lovdata.no/register/lovtidend?kunngjortDato=19.05.2020%20kl.%2015.20'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TARO/tariff/taro-2018-243> (referer: https://lovdata.no/register/tariffavtaler)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend?kunngjortDato=18.05.2020%20kl.%2015.50#18.05.202015.50> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1021> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1022> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1023>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1023'}
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTI/lov/2020-05-20-42> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-05-14-1020> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/lovtidend?kunngjortDato=18.05.2020%20kl.%2015.40#18.05.202015.40> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1024>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1024'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-330>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-330'}
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-05-14-1019> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TARO/tariff/taro-2018-243>
+{'extracted_url': 'https://lovdata.no/dokument/TARO/tariff/taro-2018-243'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend?kunngjortDato=18.05.2020%20kl.%2015.50>
+{'extracted_url': 'https://lovdata.no/register/lovtidend?kunngjortDato=18.05.2020%20kl.%2015.50'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1021>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-15-1021'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1022>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/forskrift/2020-05-18-1022'}
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-05-04-1017> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-02-13-1016> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-02-13-1015> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTI/lov/2020-05-20-42>
+{'extracted_url': 'https://lovdata.no/dokument/LTI/lov/2020-05-20-42'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-05-14-1020>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-05-14-1020'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/lovtidend?kunngjortDato=18.05.2020%20kl.%2015.40>
+{'extracted_url': 'https://lovdata.no/register/lovtidend?kunngjortDato=18.05.2020%20kl.%2015.40'}
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/traktater/hefter> (referer: https://lovdata.no/register/traktater)
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-05-14-1019>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-05-14-1019'}
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/traktater/lenker> (referer: https://lovdata.no/register/traktater)
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/LTII/forskrift/2020-05-13-1018> (referer: https://lovdata.no/register/lovtidend)
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-05-04-1017>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-05-04-1017'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-02-13-1016>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-02-13-1016'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-02-13-1015>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-02-13-1015'}
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TRAKTAT/traktat/2020-01-30-3> (referer: https://lovdata.no/register/traktater)
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/traktater/hefter>
+{'extracted_url': 'https://lovdata.no/traktater/hefter'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/traktater/lenker>
+{'extracted_url': 'https://lovdata.no/traktater/lenker'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/LTII/forskrift/2020-05-13-1018>
+{'extracted_url': 'https://lovdata.no/dokument/LTII/forskrift/2020-05-13-1018'}
+2020-05-21 13:16:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://lovdata.no/lovtidend/journal/> from <GET http://lovdata.no/lovtidend/journal/>
+2020-05-21 13:16:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://lovdata.no/lovtidend/hefter/> from <GET http://lovdata.no/lovtidend/hefter/>
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/register/traktater?dir=asc> (referer: https://lovdata.no/register/traktater)
+2020-05-21 13:16:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://lovdata.no/dokument/TRAKTAT/traktat/2020-02-28-4> (referer: https://lovdata.no/register/traktater)
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TRAKTAT/traktat/2020-01-30-3>
+{'extracted_url': 'https://lovdata.no/dokument/TRAKTAT/traktat/2020-01-30-3'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/register/traktater?dir=asc>
+{'extracted_url': 'https://lovdata.no/register/traktater?dir=asc'}
+2020-05-21 13:16:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://lovdata.no/dokument/TRAKTAT/traktat/2020-02-28-4>
+{'extracted_url': 'https://lovdata.no/dokument/TRAKTAT/traktat/2020-02-28-4'}
+2020-05-21 13:16:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:16:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:16:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:16:10 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/personvern HTTP/1.1" 200 None
+2020-05-21 13:16:11 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:16:11 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:16:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:16:18 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/dommer HTTP/1.1" 200 None
+2020-05-21 13:16:18 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:16:18 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:16:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:17:20 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/tariffavtaler HTTP/1.1" 504 182
+2020-05-21 13:17:20 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:20 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:20 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:17:35 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/lover HTTP/1.1" 200 None
+2020-05-21 13:17:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:17:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/lovtidend HTTP/1.1" 200 None
+2020-05-21 13:17:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:17:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/traktater HTTP/1.1" 200 None
+2020-05-21 13:17:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:47 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:17:53 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/forskrifter HTTP/1.1" 200 None
+2020-05-21 13:17:53 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:53 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:53 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:17:59 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/lokaleForskrifter HTTP/1.1" 200 None
+2020-05-21 13:17:59 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:59 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:17:59 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:18:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/stortingsvedtak HTTP/1.1" 200 None
+2020-05-21 13:18:05 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:05 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:18:11 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/eosAvtalen HTTP/1.1" 200 None
+2020-05-21 13:18:11 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:11 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:18:17 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/loverEngelsk HTTP/1.1" 200 None
+2020-05-21 13:18:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:17 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:18:23 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/forskrifterEngelsk HTTP/1.1" 200 None
+2020-05-21 13:18:23 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:23 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:18:28 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/tjenester/varsling HTTP/1.1" 200 None
+2020-05-21 13:18:29 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:29 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:18:56 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/advokater/ HTTP/1.1" 200 None
+2020-05-21 13:18:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:18:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:03 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/dommerEngelsk HTTP/1.1" 200 None
+2020-05-21 13:19:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:09 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/api HTTP/1.1" 200 None
+2020-05-21 13:19:09 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:09 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:17 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/tjenester/pro/ HTTP/1.1" 200 None
+2020-05-21 13:19:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:17 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:22 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/publikasjoner HTTP/1.1" 200 None
+2020-05-21 13:19:22 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:22 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/tjenester/tidsskrift HTTP/1.1" 200 None
+2020-05-21 13:19:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:30 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/pro/auth/student HTTP/1.1" 200 None
+2020-05-21 13:19:30 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:30 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:30 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:36 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/om_lovdata HTTP/1.1" 200 None
+2020-05-21 13:19:36 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:36 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:36 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:41 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/brukeravtale HTTP/1.1" 200 None
+2020-05-21 13:19:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:46 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/kontakt HTTP/1.1" 200 None
+2020-05-21 13:19:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:47 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:52 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/redaktoransvar HTTP/1.1" 200 None
+2020-05-21 13:19:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:52 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:19:57 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/rss HTTP/1.1" 200 None
+2020-05-21 13:19:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:19:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/lenker HTTP/1.1" 200 None
+2020-05-21 13:20:05 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:05 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:10 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/eli/ HTTP/1.1" 200 None
+2020-05-21 13:20:11 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:11 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:11 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:17 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/22juli HTTP/1.1" 200 None
+2020-05-21 13:20:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:17 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:22 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/eksamen HTTP/1.1" 200 None
+2020-05-21 13:20:22 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:22 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:28 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/ HTTP/1.1" 200 None
+2020-05-21 13:20:28 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:28 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:28 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:34 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/artikkel/statsrad_20__mai_2020/2710 HTTP/1.1" 200 None
+2020-05-21 13:20:34 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:34 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:34 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/NL/lov/2008-06-27-71 HTTP/1.1" 200 None
+2020-05-21 13:20:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/NL/lov/2005-05-20-28 HTTP/1.1" 200 None
+2020-05-21 13:20:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:47 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:20:54 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/NL/lov/1997-06-13-44 HTTP/1.1" 200 None
+2020-05-21 13:20:55 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:55 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:20:55 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:02 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/artikler HTTP/1.1" 200 None
+2020-05-21 13:21:02 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:02 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:08 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/artikkel/statsrad_7__mai_2020/2702 HTTP/1.1" 200 None
+2020-05-21 13:21:08 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:08 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:08 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:13 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/artikkel/statsrad_12__mai_2020/2704 HTTP/1.1" 200 None
+2020-05-21 13:21:13 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:13 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:13 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:18 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/artikkel/statsrad_29__april_2020/2699 HTTP/1.1" 200 None
+2020-05-21 13:21:18 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:18 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:23 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1032 HTTP/1.1" 200 None
+2020-05-21 13:21:24 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:24 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:24 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:29 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1031 HTTP/1.1" 200 None
+2020-05-21 13:21:29 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:29 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:34 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1029 HTTP/1.1" 200 None
+2020-05-21 13:21:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:21:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LTI/forskrift/2020-05-20-1030 HTTP/1.1" 200 None
+2020-05-21 13:21:40 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:40 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:21:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:22:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://grunnloven.lovdata.no/ HTTP/1.1" 504 182
+2020-05-21 13:22:40 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:22:40 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:22:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:22:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LTII/forskrift/2020-05-11-1028 HTTP/1.1" 200 None
+2020-05-21 13:22:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:22:47 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:22:47 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:22:54 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2020-68999 HTTP/1.1" 200 None
+2020-05-21 13:22:54 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:22:54 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:22:54 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:00 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LHSIV/avgjorelse/lh-2019-181677 HTTP/1.1" 200 None
+2020-05-21 13:23:00 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:00 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:00 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:06 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-57339 HTTP/1.1" 200 None
+2020-05-21 13:23:06 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:06 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:06 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:12 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LGSIV/avgjorelse/lg-2020-56868 HTTP/1.1" 200 None
+2020-05-21 13:23:12 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:12 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:18 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-21210 HTTP/1.1" 200 None
+2020-05-21 13:23:18 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:18 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:24 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/information_in_english HTTP/1.1" 200 None
+2020-05-21 13:23:24 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:24 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:24 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:29 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/faq HTTP/1.1" 200 None
+2020-05-21 13:23:30 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:30 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:30 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:35 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/om_emdn HTTP/1.1" 200 None
+2020-05-21 13:23:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/info/om_lagmannsrettens_rettskraft HTTP/1.1" 200 None
+2020-05-21 13:23:40 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:40 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:40 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:46 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LASIV/avgjorelse/la-2020-50133 HTTP/1.1" 200 None
+2020-05-21 13:23:46 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:46 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:46 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:51 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1014-u HTTP/1.1" 200 None
+2020-05-21 13:23:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:52 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:23:57 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1013-u HTTP/1.1" 200 None
+2020-05-21 13:23:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:23:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:04 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/NL/lov/1997-02-28-19 HTTP/1.1" 200 None
+2020-05-21 13:24:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:10 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LGSTR/avgjorelse/lg-2019-191278 HTTP/1.1" 200 None
+2020-05-21 13:24:10 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:10 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:15 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LESTR/avgjorelse/le-2020-66103 HTTP/1.1" 200 None
+2020-05-21 13:24:15 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:15 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-63844 HTTP/1.1" 200 None
+2020-05-21 13:24:21 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:21 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:21 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2020-1012-u HTTP/1.1" 200 None
+2020-05-21 13:24:26 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:26 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:26 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:31 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSTR/avgjorelse/lb-2020-47675 HTTP/1.1" 200 None
+2020-05-21 13:24:31 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:31 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:31 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:37 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-42180 HTTP/1.1" 200 None
+2020-05-21 13:24:37 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:37 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:24:42 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-76011 HTTP/1.1" 200 None
+2020-05-21 13:24:42 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:42 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:24:42 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:25:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/NL/lov/2005-06-17-62 HTTP/1.1" 200 None
+2020-05-21 13:25:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:41 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:25:46 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-54734 HTTP/1.1" 200 None
+2020-05-21 13:25:46 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:46 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:46 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:25:51 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2019-48097 HTTP/1.1" 200 None
+2020-05-21 13:25:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:52 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:25:58 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2020-53743 HTTP/1.1" 200 None
+2020-05-21 13:25:58 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:58 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:25:58 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:04 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/SPH/sph-2020 HTTP/1.1" 200 None
+2020-05-21 13:26:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:04 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:10 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/tariffavtaler?dir=asc HTTP/1.1" 200 None
+2020-05-21 13:26:10 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:10 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:17 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/LBSIV/avgjorelse/lb-2017-190659 HTTP/1.1" 200 None
+2020-05-21 13:26:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:17 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:17 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:24 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/HRSTR/avgjorelse/hr-2020-1001-a HTTP/1.1" 200 None
+2020-05-21 13:26:25 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:25 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:25 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:31 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/dommer?offset=20 HTTP/1.1" 200 None
+2020-05-21 13:26:31 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:31 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:31 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:36 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/tariffavtaler?sort=alpha HTTP/1.1" 200 None
+2020-05-21 13:26:36 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:36 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:36 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:49 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2019-527 HTTP/1.1" 200 None
+2020-05-21 13:26:49 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:49 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:49 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:26:56 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARH/tariff/tarh-2018-514 HTTP/1.1" 200 None
+2020-05-21 13:26:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:57 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:26:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:27:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-515 HTTP/1.1" 200 None
+2020-05-21 13:27:05 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:05 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:05 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:27:23 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-284 HTTP/1.1" 200 None
+2020-05-21 13:27:23 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:23 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:27:34 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-272 HTTP/1.1" 200 None
+2020-05-21 13:27:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:35 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:27:51 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-211 HTTP/1.1" 200 None
+2020-05-21 13:27:51 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:51 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:27:51 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:28:08 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-520 HTTP/1.1" 200 None
+2020-05-21 13:28:08 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:08 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:08 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:28:23 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-271 HTTP/1.1" 200 None
+2020-05-21 13:28:23 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:23 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:23 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:28:36 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-466 HTTP/1.1" 200 None
+2020-05-21 13:28:37 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:37 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:28:52 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-519 HTTP/1.1" 200 None
+2020-05-21 13:28:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:52 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:28:52 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:29:07 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-512 HTTP/1.1" 200 None
+2020-05-21 13:29:08 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:08 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:08 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:29:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-453 HTTP/1.1" 200 None
+2020-05-21 13:29:22 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:22 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:29:28 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-452 HTTP/1.1" 200 None
+2020-05-21 13:29:29 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:29 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:29:46 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-510 HTTP/1.1" 200 None
+2020-05-21 13:29:46 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:46 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:29:46 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:30:02 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-390 HTTP/1.1" 200 None
+2020-05-21 13:30:02 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:02 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:02 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:30:09 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/tariffavtaler?offset=20 HTTP/1.1" 200 None
+2020-05-21 13:30:09 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:09 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:09 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:30:13 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/ikkeSanksjonerteLover HTTP/1.1" 200 None
+2020-05-21 13:30:13 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:13 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:13 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:30:20 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/dokument/TARO/tariff/taro-2018-516 HTTP/1.1" 200 None
+2020-05-21 13:30:20 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:20 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:20 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 13:30:27 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://lovdata.no/register/lover?dir=asc HTTP/1.1" 200 None
+2020-05-21 13:30:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:27 [urllib3.util.retry] DEBUG: Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2020-05-21 13:30:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu

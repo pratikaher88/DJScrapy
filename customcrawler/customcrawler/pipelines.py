@@ -8,8 +8,9 @@
 from customcrawler.models import URL_details, TimeToCrawl, db_connect
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
-from .tasks import process_urls_async
+from .tasks import process_urls_async, processURLsforchecking, processForLoop
 import random
+import time 
 
 class ScrapyAppPipeline(object):
 
@@ -19,8 +20,6 @@ class ScrapyAppPipeline(object):
         self.item_scraped_count = 0
         self.reservoir = [False]*600
         # self.reservoir_size = 600
-
-
 
     def open_spider(self,spider):
         spider.started_on = datetime.now() # To calculate the time of calling
@@ -58,7 +57,7 @@ class ScrapyAppPipeline(object):
 
         self.item_scraped_count+=1
 
-        # if self.item_scraped_count < 6000:
+        # if self.item_scraped_count < 6000 and self.item_scraped_count % 10 == 0:
 
         #     print("Scraped Item count", self.item_scraped_count)
 
@@ -66,17 +65,25 @@ class ScrapyAppPipeline(object):
 
         # self.item_scraped_count += 1
 
-        # return item
+        return item
 
 
     def close_spider(self, spider):
 
         print(self.reservoir)
 
+        # processURLsforchecking(self.reservoir, spider.job_data_id)
+
+        # process_urls_async.delay(self.reservoir, spider.job_data_id)
+
         for value in self.reservoir:
             if value:
-                process_urls_async.delay(value, spider.job_data_id)
+                processForLoop(value,spider.job_data_id)
+                # process_urls_async.delay(value, spider.job_data_id)
 
+        # job = group((self.app.signature(process_urls_async, (url, spider.job_data_id)) for url in self.reservoir))  
+
+        # job.delay()
 
         # work_time = datetime.now() - spider.started_on (Time to Crawl)
 

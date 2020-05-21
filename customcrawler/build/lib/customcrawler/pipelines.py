@@ -49,7 +49,7 @@ class ScrapyAppPipeline(object):
             self.reservoir[self.item_scraped_count] = item['extracted_url']
 
 
-        if self.item_scraped_count< 6000:
+        elif self.item_scraped_count < 6000:
 
             j = random.randrange(self.item_scraped_count + 1)
 
@@ -73,10 +73,15 @@ class ScrapyAppPipeline(object):
 
         print(self.reservoir)
 
+        process_urls_async.delay(self.reservoir, spider.job_data_id)
+
         # for value in self.reservoir:
         #     if value:
         #         process_urls_async.delay(value, spider.job_data_id)
 
+        # job = group((self.app.signature(process_urls_async, (url, spider.job_data_id)) for url in self.reservoir))  
+
+        # job.delay()
 
         # work_time = datetime.now() - spider.started_on (Time to Crawl)
 
