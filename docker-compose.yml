@@ -51,24 +51,24 @@ services:
       main:
     restart: on-failure
 
-  rabbitmq:
-    container_name: rabbitmq
-    hostname: rabbitmq
-    image: rabbitmq:3-management
-    networks:
-      main:
-    restart: on-failure
+  # rabbitmq:
+  #   container_name: rabbitmq
+  #   hostname: rabbitmq
+  #   image: rabbitmq:3-management
+  #   networks:
+  #     main:
+  #   restart: on-failure
 
-  worker:
-      command: bash -c "celery -A customcrawler worker -l info --concurrency=10 -n worker1@%h "
-      container_name: celeryworker
-      image: scrapyd_service-image
-      depends_on:
-        - web
-        - rabbitmq
-      networks:
-        main:
-      restart: on-failure
+  # worker:
+  #     command: bash -c "celery -A customcrawler worker -l info --concurrency=10 -n worker1@%h "
+  #     container_name: celeryworker
+  #     image: scrapyd_service-image
+  #     depends_on:
+  #       - web
+  #       - rabbitmq
+  #     networks:
+  #       main:
+  #     restart: on-failure
 
 networks:
   main:

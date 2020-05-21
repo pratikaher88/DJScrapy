@@ -1,0 +1,370 @@
+2020-05-21 14:56:11 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: customcrawler)
+2020-05-21 14:56:11 [scrapy.utils.log] INFO: Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.6.10 (default, Mar 31 2020, 16:24:51) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.9.93-linuxkit-aufs-x86_64-with-debian-10.3
+2020-05-21 14:56:11 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'customcrawler', 'CLOSESPIDER_PAGECOUNT': '50', 'CLOSESPIDER_TIMEOUT': '0', 'CONCURRENT_REQUESTS': 32, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/customcrawler/toscrapespiderax/34a0477a9b7311eab0840242ac180003.log', 'NEWSPIDER_MODULE': 'customcrawler.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['customcrawler.spiders']}
+2020-05-21 14:56:11 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2020-05-21 14:56:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-21 14:56:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-21 14:56:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['customcrawler.pipelines.ScrapyAppPipeline']
+2020-05-21 14:56:11 [scrapy.core.engine] INFO: Spider opened
+2020-05-21 14:56:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-21 14:56:11 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2020-05-21 14:56:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/> (referer: None)
+2020-05-21 14:56:16 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.uia.no/#content-middle> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-05-21 14:56:19 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.uia.no/for-ansatte> (referer: https://www.uia.no/)
+2020-05-21 14:56:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.uia.no/for-ansatte>: HTTP status code is not handled or not allowed
+2020-05-21 14:56:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/informasjonskapsler-paa-uia.no> (referer: https://www.uia.no/)
+2020-05-21 14:56:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/informasjonskapsler-paa-uia.no>
+{'extracted_url': 'https://www.uia.no/informasjonskapsler-paa-uia.no'}
+2020-05-21 14:56:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student> (referer: https://www.uia.no/)
+2020-05-21 14:56:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student>
+{'extracted_url': 'https://www.uia.no/student'}
+2020-05-21 14:56:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/ledige-stillinger> (referer: https://www.uia.no/)
+2020-05-21 14:56:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/ledige-stillinger>
+{'extracted_url': 'https://www.uia.no/ledige-stillinger'}
+2020-05-21 14:56:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/finn-frem/kontaktinformasjon> (referer: https://www.uia.no/)
+2020-05-21 14:56:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/finn-frem/kontaktinformasjon>
+{'extracted_url': 'https://www.uia.no/om-uia/finn-frem/kontaktinformasjon'}
+2020-05-21 14:56:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra> (referer: https://www.uia.no/)
+2020-05-21 14:56:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra'}
+2020-05-21 14:56:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/study/search> (referer: https://www.uia.no/)
+2020-05-21 14:56:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/study/search>
+{'extracted_url': 'https://www.uia.no/study/search'}
+2020-05-21 14:56:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/en> from <GET https://www.uia.no/en/>
+2020-05-21 14:56:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia> (referer: https://www.uia.no/)
+2020-05-21 14:56:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier2> (referer: https://www.uia.no/)
+2020-05-21 14:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia>
+{'extracted_url': 'https://www.uia.no/om-uia'}
+2020-05-21 14:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier2>
+{'extracted_url': 'https://www.uia.no/studier2'}
+2020-05-21 14:56:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/> (referer: https://www.uia.no/)
+2020-05-21 14:56:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/>
+{'extracted_url': 'https://www.uia.no/'}
+2020-05-21 14:56:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/student/timeplanar-paa-uia> from <GET http://www.uia.no/student/timeplanar-paa-uia>
+2020-05-21 14:56:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/veileder-om-smittevern-for-uia-under-koronavirusutbruddet-2020> (referer: https://www.uia.no/)
+2020-05-21 14:56:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/veileder-om-smittevern-for-uia-under-koronavirusutbruddet-2020>
+{'extracted_url': 'https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/veileder-om-smittevern-for-uia-under-koronavirusutbruddet-2020'}
+2020-05-21 14:56:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/student/canvas> from <GET http://www.uia.no/student/canvas>
+2020-05-21 14:56:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/samarbeid> (referer: https://www.uia.no/)
+2020-05-21 14:56:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/samarbeid>
+{'extracted_url': 'https://www.uia.no/samarbeid'}
+2020-05-21 14:56:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studentreisen/snart-student> (referer: https://www.uia.no/)
+2020-05-21 14:56:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/kampanjer/etter-og-videreutdanningstilbud-ved-uia-hoesten-2020> (referer: https://www.uia.no/)
+2020-05-21 14:56:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studentreisen/snart-student>
+{'extracted_url': 'https://www.uia.no/studentreisen/snart-student'}
+2020-05-21 14:56:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/kampanjer/etter-og-videreutdanningstilbud-ved-uia-hoesten-2020>
+{'extracted_url': 'https://www.uia.no/kampanjer/etter-og-videreutdanningstilbud-ved-uia-hoesten-2020'}
+2020-05-21 14:56:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset> (referer: https://www.uia.no/)
+2020-05-21 14:56:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset>
+{'extracted_url': 'https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset'}
+2020-05-21 14:56:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studyadm/available#tab-to-programs> (referer: https://www.uia.no/)
+2020-05-21 14:56:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studyadm/available>
+{'extracted_url': 'https://www.uia.no/studyadm/available'}
+2020-05-21 14:56:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/bibliotek> (referer: https://www.uia.no/)
+2020-05-21 14:56:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter> (referer: https://www.uia.no/)
+2020-05-21 14:56:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/bibliotek>
+{'extracted_url': 'https://www.uia.no/bibliotek'}
+2020-05-21 14:56:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter>
+{'extracted_url': 'https://www.uia.no/nyheter'}
+2020-05-21 14:56:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/uia/news?tags[]=Kronikk> (referer: https://www.uia.no/)
+2020-05-21 14:56:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/uia/news?tags[]=Kronikk>
+{'extracted_url': 'https://www.uia.no/uia/news?tags[]=Kronikk'}
+2020-05-21 14:56:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/avlyser-studentutveksling-til-hoesten> (referer: https://www.uia.no/)
+2020-05-21 14:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/avlyser-studentutveksling-til-hoesten>
+{'extracted_url': 'https://www.uia.no/nyheter/avlyser-studentutveksling-til-hoesten'}
+2020-05-21 14:56:30 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.facebook.com': <GET https://www.facebook.com/sharer/sharer.php?u=https://www.uia.no/nyheter/avlyser-studentutveksling-til-hoesten>
+2020-05-21 14:56:30 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'twitter.com': <GET https://twitter.com/intent/tweet?url=https://www.uia.no/nyheter/avlyser-studentutveksling-til-hoesten>
+2020-05-21 14:56:30 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.linkedin.com': <GET https://www.linkedin.com/shareArticle?mini=true&url=https://www.uia.no/nyheter/avlyser-studentutveksling-til-hoesten>
+2020-05-21 14:56:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/uia-tildelt-millioner-til-utdanning-av-permitterte-og-arbeidsledige> (referer: https://www.uia.no/)
+2020-05-21 14:56:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/kk/tlf> (referer: https://www.uia.no/)
+2020-05-21 14:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/uia-tildelt-millioner-til-utdanning-av-permitterte-og-arbeidsledige>
+{'extracted_url': 'https://www.uia.no/nyheter/uia-tildelt-millioner-til-utdanning-av-permitterte-og-arbeidsledige'}
+2020-05-21 14:56:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/kk/tlf>
+{'extracted_url': 'https://www.uia.no/kk/tlf'}
+2020-05-21 14:56:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/laererlivet-er-ikke-paa-sosiale-medier-du-er-god-nok> (referer: https://www.uia.no/)
+2020-05-21 14:56:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/laererlivet-er-ikke-paa-sosiale-medier-du-er-god-nok>
+{'extracted_url': 'https://www.uia.no/nyheter/laererlivet-er-ikke-paa-sosiale-medier-du-er-god-nok'}
+2020-05-21 14:56:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/kunstfag-prosjekter-faar-korona-penger> (referer: https://www.uia.no/)
+2020-05-21 14:56:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/kunstfag-prosjekter-faar-korona-penger>
+{'extracted_url': 'https://www.uia.no/nyheter/kunstfag-prosjekter-faar-korona-penger'}
+2020-05-21 14:56:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/forskning/disputaser/data-assistert-diagnostisering-av-feilmuligheter-i-elektriske-girkassebaserte-drivlinjer-i-industrimaskiner> (referer: https://www.uia.no/)
+2020-05-21 14:56:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/koronatiden-kickstarter-ny-undervisningsvirkelighet> (referer: https://www.uia.no/)
+2020-05-21 14:56:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/forskning/disputaser/data-assistert-diagnostisering-av-feilmuligheter-i-elektriske-girkassebaserte-drivlinjer-i-industrimaskiner>
+{'extracted_url': 'https://www.uia.no/forskning/disputaser/data-assistert-diagnostisering-av-feilmuligheter-i-elektriske-girkassebaserte-drivlinjer-i-industrimaskiner'}
+2020-05-21 14:56:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/koronatiden-kickstarter-ny-undervisningsvirkelighet>
+{'extracted_url': 'https://www.uia.no/nyheter/koronatiden-kickstarter-ny-undervisningsvirkelighet'}
+2020-05-21 14:56:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/tilgang-til-campus> (referer: https://www.uia.no/)
+2020-05-21 14:56:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/tilgang-til-campus>
+{'extracted_url': 'https://www.uia.no/nyheter/tilgang-til-campus'}
+2020-05-21 14:56:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/forskning/disputaser/tilstandsovervaaking-av-store-saktegaaende-rullingslagre> (referer: https://www.uia.no/)
+2020-05-21 14:56:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/forskning/disputaser/tilstandsovervaaking-av-store-saktegaaende-rullingslagre>
+{'extracted_url': 'https://www.uia.no/forskning/disputaser/tilstandsovervaaking-av-store-saktegaaende-rullingslagre'}
+2020-05-21 14:56:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/disse-spiser-mest-frukt-og-groent> (referer: https://www.uia.no/)
+2020-05-21 14:56:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/disse-spiser-mest-frukt-og-groent>
+{'extracted_url': 'https://www.uia.no/nyheter/disse-spiser-mest-frukt-og-groent'}
+2020-05-21 14:56:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/uias-digitale-framtid> (referer: https://www.uia.no/)
+2020-05-21 14:56:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/uia/news?tags[]=e-helse> (referer: https://www.uia.no/)
+2020-05-21 14:56:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/uias-digitale-framtid>
+{'extracted_url': 'https://www.uia.no/nyheter/uias-digitale-framtid'}
+2020-05-21 14:56:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/kjemper-om-styreplassen-til-midlertidig-tilsatte> (referer: https://www.uia.no/)
+2020-05-21 14:56:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/uia/news?tags[]=e-helse>
+{'extracted_url': 'https://www.uia.no/uia/news?tags[]=e-helse'}
+2020-05-21 14:56:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/kjemper-om-styreplassen-til-midlertidig-tilsatte>
+{'extracted_url': 'https://www.uia.no/nyheter/kjemper-om-styreplassen-til-midlertidig-tilsatte'}
+2020-05-21 14:56:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/menneskeliknande-robot-til-uia> (referer: https://www.uia.no/)
+2020-05-21 14:56:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/menneskeliknande-robot-til-uia>
+{'extracted_url': 'https://www.uia.no/nyheter/menneskeliknande-robot-til-uia'}
+2020-05-21 14:56:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/nyheter/utfordrer-gradsforskriften> (referer: https://www.uia.no/)
+2020-05-21 14:56:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/nyheter/utfordrer-gradsforskriften>
+{'extracted_url': 'https://www.uia.no/nyheter/utfordrer-gradsforskriften'}
+2020-05-21 14:56:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/uia/news?tags[]=Forskning> (referer: https://www.uia.no/)
+2020-05-21 14:56:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/uia/news?tags[]=Forskning>
+{'extracted_url': 'https://www.uia.no/uia/news?tags[]=Forskning'}
+2020-05-21 14:56:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia> (referer: https://www.uia.no/)
+2020-05-21 14:56:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/cookies-on-uia.no> (referer: https://www.uia.no/informasjonskapsler-paa-uia.no)
+2020-05-21 14:56:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia'}
+2020-05-21 14:56:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/cookies-on-uia.no>
+{'extracted_url': 'https://www.uia.no/en/cookies-on-uia.no'}
+2020-05-21 14:56:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/forskning> (referer: https://www.uia.no/)
+2020-05-21 14:56:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en> (referer: https://www.uia.no/)
+2020-05-21 14:56:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/student> (referer: https://www.uia.no/student)
+2020-05-21 14:56:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/forskning>
+{'extracted_url': 'https://www.uia.no/forskning'}
+2020-05-21 14:56:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en>
+{'extracted_url': 'https://www.uia.no/en'}
+2020-05-21 14:56:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/student>
+{'extracted_url': 'https://www.uia.no/en/student'}
+2020-05-21 14:56:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/canvas> (referer: https://www.uia.no/student)
+2020-05-21 14:56:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/canvas>
+{'extracted_url': 'https://www.uia.no/student/canvas'}
+2020-05-21 14:56:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/timeplanar-paa-uia> (referer: https://www.uia.no/)
+2020-05-21 14:56:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/gode-raad-for-en-god-digital-studiehverdag> (referer: https://www.uia.no/student)
+2020-05-21 14:56:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/arrangementer> (referer: https://www.uia.no/)
+2020-05-21 14:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/timeplanar-paa-uia>
+{'extracted_url': 'https://www.uia.no/student/timeplanar-paa-uia'}
+2020-05-21 14:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/gode-raad-for-en-god-digital-studiehverdag>
+{'extracted_url': 'https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/gode-raad-for-en-god-digital-studiehverdag'}
+2020-05-21 14:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/arrangementer>
+{'extracted_url': 'https://www.uia.no/arrangementer'}
+2020-05-21 14:56:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/studentweb> (referer: https://www.uia.no/student)
+2020-05-21 14:56:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/eksamen> (referer: https://www.uia.no/student)
+2020-05-21 14:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/studentweb>
+{'extracted_url': 'https://www.uia.no/student/studentweb'}
+2020-05-21 14:56:36 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'eur01.safelinks.protection.outlook.com': <GET https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.uia.no%2Fstudent%2Fnyttige-verktoey%2Fnavneendring&data=02%7C01%7Ctone.aasheim%40uia.no%7C6775c74f37c94f5fd4e208d73a7e320b%7C8482881e36994b3fb135cf4800bc1efb%7C1%7C0%7C637042185987298128&sdata=CLy2C4p3sLOi1Ybvn4WxPacIkEr6xUu5llCRS74GaNg%3D&reserved=0>
+2020-05-21 14:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/eksamen>
+{'extracted_url': 'https://www.uia.no/student/eksamen'}
+2020-05-21 14:56:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/uia-hjelp/it-og-medietjenester/hvordan-jobbe-sikkert-utenfor-campus> (referer: https://www.uia.no/student)
+2020-05-21 14:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/uia-hjelp/it-og-medietjenester/hvordan-jobbe-sikkert-utenfor-campus>
+{'extracted_url': 'https://www.uia.no/student/uia-hjelp/it-og-medietjenester/hvordan-jobbe-sikkert-utenfor-campus'}
+2020-05-21 14:56:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/uia-hjelp> (referer: https://www.uia.no/student)
+2020-05-21 14:56:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/uia-hjelp>
+{'extracted_url': 'https://www.uia.no/student/uia-hjelp'}
+2020-05-21 14:56:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studieplaner/search> (referer: https://www.uia.no/student)
+2020-05-21 14:56:38 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2020-05-21 14:56:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/utveksling> (referer: https://www.uia.no/student)
+2020-05-21 14:56:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studieplaner/search>
+{'extracted_url': 'https://www.uia.no/studieplaner/search'}
+2020-05-21 14:56:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/utveksling>
+{'extracted_url': 'https://www.uia.no/student/utveksling'}
+2020-05-21 14:56:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/studenttillitsvalgt> (referer: https://www.uia.no/student)
+2020-05-21 14:56:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/administrer-dine-studier> (referer: https://www.uia.no/student)
+2020-05-21 14:56:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/studenttillitsvalgt>
+{'extracted_url': 'https://www.uia.no/student/studenttillitsvalgt'}
+2020-05-21 14:56:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/studentombud> (referer: https://www.uia.no/student)
+2020-05-21 14:56:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/administrer-dine-studier>
+{'extracted_url': 'https://www.uia.no/student/administrer-dine-studier'}
+2020-05-21 14:56:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/studentombud>
+{'extracted_url': 'https://www.uia.no/student/studentombud'}
+2020-05-21 14:56:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/hjelp-og-veiledning/trenger-du-studieveiledning> (referer: https://www.uia.no/student)
+2020-05-21 14:56:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/hjelp-og-veiledning/trenger-du-studieveiledning>
+{'extracted_url': 'https://www.uia.no/student/hjelp-og-veiledning/trenger-du-studieveiledning'}
+2020-05-21 14:56:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder> (referer: https://www.uia.no/student)
+2020-05-21 14:56:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder>
+{'extracted_url': 'https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder'}
+2020-05-21 14:56:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/organisasjonen/akademisk-kalender> (referer: https://www.uia.no/student)
+2020-05-21 14:56:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/organisasjonen/akademisk-kalender>
+{'extracted_url': 'https://www.uia.no/om-uia/organisasjonen/akademisk-kalender'}
+2020-05-21 14:56:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/ressurssenteret> (referer: https://www.uia.no/student)
+2020-05-21 14:56:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.uia.no/nyskaping> from <GET http://www.uia.no/nyskaping>
+2020-05-21 14:56:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/ressurssenteret>
+{'extracted_url': 'https://www.uia.no/student/ressurssenteret'}
+2020-05-21 14:56:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/reglement-og-retningslinjer> (referer: https://www.uia.no/student)
+2020-05-21 14:56:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia/personvernerklaering-for-studenter-og-soekere> (referer: https://www.uia.no/student)
+2020-05-21 14:56:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/reglement-og-retningslinjer>
+{'extracted_url': 'https://www.uia.no/student/reglement-og-retningslinjer'}
+2020-05-21 14:56:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia/personvernerklaering-for-studenter-og-soekere>
+{'extracted_url': 'https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia/personvernerklaering-for-studenter-og-soekere'}
+2020-05-21 14:56:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/registrer-oppmoete> (referer: https://www.uia.no/student)
+2020-05-21 14:56:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/registrer-oppmoete>
+{'extracted_url': 'https://www.uia.no/student/registrer-oppmoete'}
+2020-05-21 14:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/uia-karriere> (referer: https://www.uia.no/student)
+2020-05-21 14:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/nyttige-verktoey/brev-og-bestillinger> (referer: https://www.uia.no/student)
+2020-05-21 14:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/studier2/livet-rundt-studiene2/deltidsjobb> (referer: https://www.uia.no/student)
+2020-05-21 14:56:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/uia-karriere>
+{'extracted_url': 'https://www.uia.no/student/uia-karriere'}
+2020-05-21 14:56:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/nyttige-verktoey/brev-og-bestillinger>
+{'extracted_url': 'https://www.uia.no/student/nyttige-verktoey/brev-og-bestillinger'}
+2020-05-21 14:56:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/studier2/livet-rundt-studiene2/deltidsjobb>
+{'extracted_url': 'https://www.uia.no/studier2/livet-rundt-studiene2/deltidsjobb'}
+2020-05-21 14:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/livet-rundt-studiene/studentdemokrati> (referer: https://www.uia.no/student)
+2020-05-21 14:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/fadderordningen> (referer: https://www.uia.no/student)
+2020-05-21 14:56:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/livet-rundt-studiene/studentdemokrati>
+{'extracted_url': 'https://www.uia.no/student/livet-rundt-studiene/studentdemokrati'}
+2020-05-21 14:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/livet-rundt-studiene/bli-buddy> (referer: https://www.uia.no/student)
+2020-05-21 14:56:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/fadderordningen>
+{'extracted_url': 'https://www.uia.no/student/fadderordningen'}
+2020-05-21 14:56:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/livet-rundt-studiene/studentforeninger-og-studentaktiviteter-paa-uia> (referer: https://www.uia.no/student)
+2020-05-21 14:56:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/livet-rundt-studiene/bli-buddy>
+{'extracted_url': 'https://www.uia.no/student/livet-rundt-studiene/bli-buddy'}
+2020-05-21 14:56:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/livet-rundt-studiene/studentforeninger-og-studentaktiviteter-paa-uia>
+{'extracted_url': 'https://www.uia.no/student/livet-rundt-studiene/studentforeninger-og-studentaktiviteter-paa-uia'}
+2020-05-21 14:56:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.uia.no/student/uia-hjelp> from <GET https://www.uia.no/student/it-hjelp#1884174228>
+2020-05-21 14:56:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/aa-jobbe-ved-uia> (referer: https://www.uia.no/ledige-stillinger)
+2020-05-21 14:56:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/aa-jobbe-ved-uia>
+{'extracted_url': 'https://www.uia.no/om-uia/aa-jobbe-ved-uia'}
+2020-05-21 14:56:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/vacancies> (referer: https://www.uia.no/ledige-stillinger)
+2020-05-21 14:56:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/vacancies>
+{'extracted_url': 'https://www.uia.no/en/vacancies'}
+2020-05-21 14:56:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/campus-kristiansand> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-05-21 14:56:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/aa-jobbe-ved-uia/ansettelsesprosessen> (referer: https://www.uia.no/ledige-stillinger)
+2020-05-21 14:56:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/campus-kristiansand>
+{'extracted_url': 'https://www.uia.no/om-uia/campus-kristiansand'}
+2020-05-21 14:56:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/aa-jobbe-ved-uia/ansettelsesprosessen>
+{'extracted_url': 'https://www.uia.no/om-uia/aa-jobbe-ved-uia/ansettelsesprosessen'}
+2020-05-21 14:56:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/student/hjelp-og-veiledning/tjenester-og-hjelp-for-studenter> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-05-21 14:56:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/student/hjelp-og-veiledning/tjenester-og-hjelp-for-studenter>
+{'extracted_url': 'https://www.uia.no/student/hjelp-og-veiledning/tjenester-og-hjelp-for-studenter'}
+2020-05-21 14:56:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/about-uia/speak-up> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-05-21 14:56:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/campus-grimstad> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-05-21 14:56:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/about-uia/speak-up>
+{'extracted_url': 'https://www.uia.no/en/about-uia/speak-up'}
+2020-05-21 14:56:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/campus-grimstad>
+{'extracted_url': 'https://www.uia.no/om-uia/campus-grimstad'}
+2020-05-21 14:56:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/finn-frem/aapningstider-paa-universitetet-i-agder> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-05-21 14:56:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/finn-frem/aapningstider-paa-universitetet-i-agder>
+{'extracted_url': 'https://www.uia.no/om-uia/finn-frem/aapningstider-paa-universitetet-i-agder'}
+2020-05-21 14:56:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/om-uia/etiske-retningslinjer-ved-uia> (referer: https://www.uia.no/om-uia/si-ifra)
+2020-05-21 14:56:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/en/about-uia/getting-around/contact-information> (referer: https://www.uia.no/om-uia/finn-frem/kontaktinformasjon)
+2020-05-21 14:56:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/om-uia/etiske-retningslinjer-ved-uia>
+{'extracted_url': 'https://www.uia.no/om-uia/etiske-retningslinjer-ved-uia'}
+2020-05-21 14:56:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/en/about-uia/getting-around/contact-information>
+{'extracted_url': 'https://www.uia.no/en/about-uia/getting-around/contact-information'}
+2020-05-21 14:56:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.uia.no/livet-paa-campus> (referer: https://www.uia.no/student)
+2020-05-21 14:56:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.uia.no/livet-paa-campus>
+{'extracted_url': 'https://www.uia.no/livet-paa-campus'}
+2020-05-21 14:56:47 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-05-21 14:56:47 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (2): axe.checkers.eiii.eu
+2020-05-21 14:56:47 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (3): axe.checkers.eiii.eu
+2020-05-21 14:56:55 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/informasjonskapsler-paa-uia.no HTTP/1.1" 200 None
+2020-05-21 14:57:02 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/en/student HTTP/1.1" 200 None
+2020-05-21 14:57:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/livet-paa-campus HTTP/1.1" 504 182
+2020-05-21 14:57:47 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.uia.no/livet-paa-campus'): Retry(total=4, connect=5, read=5, redirect=None, status=None)
+2020-05-21 14:57:47 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.uia.no/livet-paa-campus
+2020-05-21 14:57:56 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student HTTP/1.1" 504 182
+2020-05-21 14:57:56 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.uia.no/student'): Retry(total=4, connect=5, read=5, redirect=None, status=None)
+2020-05-21 14:57:56 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student
+2020-05-21 14:58:02 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/canvas HTTP/1.1" 504 182
+2020-05-21 14:58:02 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/canvas'): Retry(total=4, connect=5, read=5, redirect=None, status=None)
+2020-05-21 14:58:02 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/canvas
+2020-05-21 14:58:38 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/livet-paa-campus HTTP/1.1" 200 None
+2020-05-21 14:58:44 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student HTTP/1.1" 200 None
+2020-05-21 14:58:51 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/canvas HTTP/1.1" 200 None
+2020-05-21 14:58:59 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/ledige-stillinger HTTP/1.1" 200 None
+2020-05-21 14:59:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/timeplanar-paa-uia HTTP/1.1" 200 None
+2020-05-21 14:59:14 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/finn-frem/kontaktinformasjon HTTP/1.1" 200 None
+2020-05-21 14:59:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/gode-raad-for-en-god-digital-studiehverdag HTTP/1.1" 200 None
+2020-05-21 14:59:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/si-ifra HTTP/1.1" 200 None
+2020-05-21 14:59:33 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/arrangementer HTTP/1.1" 200 None
+2020-05-21 14:59:44 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/study/search HTTP/1.1" 200 None
+2020-05-21 14:59:49 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/studentweb HTTP/1.1" 200 None
+2020-05-21 14:59:56 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia HTTP/1.1" 200 None
+2020-05-21 15:00:03 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/eksamen HTTP/1.1" 200 None
+2020-05-21 15:00:13 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/studier2 HTTP/1.1" 200 None
+2020-05-21 15:00:19 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/uia-hjelp/it-og-medietjenester/hvordan-jobbe-sikkert-utenfor-campus HTTP/1.1" 200 None
+2020-05-21 15:00:28 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/ HTTP/1.1" 200 None
+2020-05-21 15:00:34 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/uia-hjelp HTTP/1.1" 200 None
+2020-05-21 15:00:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset/veileder-om-smittevern-for-uia-under-koronavirusutbruddet-2020 HTTP/1.1" 200 None
+2020-05-21 15:00:49 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/studieplaner/search HTTP/1.1" 200 None
+2020-05-21 15:00:57 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/samarbeid HTTP/1.1" 200 None
+2020-05-21 15:01:14 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/utveksling HTTP/1.1" 200 None
+2020-05-21 15:01:22 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/studentreisen/snart-student HTTP/1.1" 200 None
+2020-05-21 15:01:28 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/studenttillitsvalgt HTTP/1.1" 200 None
+2020-05-21 15:01:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/kampanjer/etter-og-videreutdanningstilbud-ved-uia-hoesten-2020 HTTP/1.1" 200 None
+2020-05-21 15:01:56 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/administrer-dine-studier HTTP/1.1" 200 None
+2020-05-21 15:02:08 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/retningslinjer-og-informasjon-om-koronaviruset HTTP/1.1" 200 None
+2020-05-21 15:02:15 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/studentombud HTTP/1.1" 200 None
+2020-05-21 15:02:27 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/studyadm/available HTTP/1.1" 200 None
+2020-05-21 15:02:36 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/hjelp-og-veiledning/trenger-du-studieveiledning HTTP/1.1" 200 None
+2020-05-21 15:02:44 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/bibliotek HTTP/1.1" 200 None
+2020-05-21 15:03:37 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder HTTP/1.1" 504 182
+2020-05-21 15:03:37 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder'): Retry(total=4, connect=5, read=5, redirect=None, status=None)
+2020-05-21 15:03:37 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder
+2020-05-21 15:03:44 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter HTTP/1.1" 504 182
+2020-05-21 15:03:44 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter'): Retry(total=4, connect=5, read=5, redirect=None, status=None)
+2020-05-21 15:03:44 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter
+2020-05-21 15:04:08 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/hjelp-og-veiledning/studieprogramleder HTTP/1.1" 200 None
+2020-05-21 15:04:15 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter HTTP/1.1" 200 None
+2020-05-21 15:04:27 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/organisasjonen/akademisk-kalender HTTP/1.1" 200 None
+2020-05-21 15:04:36 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/uia/news?tags[]=Kronikk HTTP/1.1" 200 None
+2020-05-21 15:04:42 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/ressurssenteret HTTP/1.1" 200 None
+2020-05-21 15:04:49 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/avlyser-studentutveksling-til-hoesten HTTP/1.1" 200 None
+2020-05-21 15:04:56 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/reglement-og-retningslinjer HTTP/1.1" 200 None
+2020-05-21 15:05:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/uia-tildelt-millioner-til-utdanning-av-permitterte-og-arbeidsledige HTTP/1.1" 200 None
+2020-05-21 15:05:14 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia/personvernerklaering-for-studenter-og-soekere HTTP/1.1" 200 None
+2020-05-21 15:05:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/kk/tlf HTTP/1.1" 200 None
+2020-05-21 15:05:32 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/registrer-oppmoete HTTP/1.1" 200 None
+2020-05-21 15:05:38 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/laererlivet-er-ikke-paa-sosiale-medier-du-er-god-nok HTTP/1.1" 200 None
+2020-05-21 15:05:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/uia-karriere HTTP/1.1" 200 None
+2020-05-21 15:05:52 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/kunstfag-prosjekter-faar-korona-penger HTTP/1.1" 200 None
+2020-05-21 15:05:57 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/nyttige-verktoey/brev-og-bestillinger HTTP/1.1" 200 None
+2020-05-21 15:06:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/forskning/disputaser/data-assistert-diagnostisering-av-feilmuligheter-i-elektriske-girkassebaserte-drivlinjer-i-industrimaskiner HTTP/1.1" 200 None
+2020-05-21 15:06:12 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/studier2/livet-rundt-studiene2/deltidsjobb HTTP/1.1" 200 None
+2020-05-21 15:06:17 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/koronatiden-kickstarter-ny-undervisningsvirkelighet HTTP/1.1" 200 None
+2020-05-21 15:06:22 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/livet-rundt-studiene/studentdemokrati HTTP/1.1" 200 None
+2020-05-21 15:06:29 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/tilgang-til-campus HTTP/1.1" 200 None
+2020-05-21 15:06:37 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/fadderordningen HTTP/1.1" 200 None
+2020-05-21 15:06:43 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/forskning/disputaser/tilstandsovervaaking-av-store-saktegaaende-rullingslagre HTTP/1.1" 200 None
+2020-05-21 15:06:51 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/livet-rundt-studiene/bli-buddy HTTP/1.1" 200 None
+2020-05-21 15:06:59 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/disse-spiser-mest-frukt-og-groent HTTP/1.1" 200 None
+2020-05-21 15:07:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/livet-rundt-studiene/studentforeninger-og-studentaktiviteter-paa-uia HTTP/1.1" 200 None
+2020-05-21 15:07:11 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/uias-digitale-framtid HTTP/1.1" 200 None
+2020-05-21 15:07:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/aa-jobbe-ved-uia HTTP/1.1" 200 None
+2020-05-21 15:07:30 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/uia/news?tags[]=e-helse HTTP/1.1" 200 None
+2020-05-21 15:07:37 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/en/vacancies HTTP/1.1" 200 None
+2020-05-21 15:07:45 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/kjemper-om-styreplassen-til-midlertidig-tilsatte HTTP/1.1" 200 None
+2020-05-21 15:07:56 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/campus-kristiansand HTTP/1.1" 200 None
+2020-05-21 15:08:04 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/menneskeliknande-robot-til-uia HTTP/1.1" 200 None
+2020-05-21 15:08:12 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/aa-jobbe-ved-uia/ansettelsesprosessen HTTP/1.1" 200 None
+2020-05-21 15:08:19 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/nyheter/utfordrer-gradsforskriften HTTP/1.1" 200 None
+2020-05-21 15:08:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/student/hjelp-og-veiledning/tjenester-og-hjelp-for-studenter HTTP/1.1" 200 None
+2020-05-21 15:08:42 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/uia/news?tags[]=Forskning HTTP/1.1" 200 None
+2020-05-21 15:08:49 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/en/about-uia/speak-up HTTP/1.1" 200 None
+2020-05-21 15:09:42 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia HTTP/1.1" 504 182
+2020-05-21 15:09:42 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia'): Retry(total=4, connect=5, read=5, redirect=None, status=None)
+2020-05-21 15:09:42 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/si-ifra/informasjonssikkerhet/personvern-paa-uia
+2020-05-21 15:09:50 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/campus-grimstad HTTP/1.1" 504 182
+2020-05-21 15:09:50 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/campus-grimstad'): Retry(total=4, connect=5, read=5, redirect=None, status=None)
+2020-05-21 15:09:50 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.uia.no/om-uia/campus-grimstad

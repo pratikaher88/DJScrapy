@@ -8,7 +8,7 @@
 from customcrawler.models import URL_details, TimeToCrawl, db_connect
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
-from .tasks import process_urls_async, processURLsforchecking, processForLoop
+from .tasks import process_urls_async, processURLsforchecking, processForLoop, threadProcess
 import random
 import time 
 
@@ -72,13 +72,15 @@ class ScrapyAppPipeline(object):
 
         print(self.reservoir)
 
+        threadProcess(self.reservoir, spider.job_data_id)
+
         # processURLsforchecking(self.reservoir, spider.job_data_id)
 
         # process_urls_async.delay(self.reservoir, spider.job_data_id)
 
-        for value in self.reservoir:
-            if value:
-                processForLoop(value,spider.job_data_id)
+        # for value in self.reservoir:
+        #     if value:
+        #         processForLoop(value,spider.job_data_id)
                 # process_urls_async.delay(value, spider.job_data_id)
 
         # job = group((self.app.signature(process_urls_async, (url, spider.job_data_id)) for url in self.reservoir))  

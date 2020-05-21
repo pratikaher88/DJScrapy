@@ -8,6 +8,12 @@ from customcrawler.models import db_connect
 from customcrawler.settings import AXE_CHECKER_URL,CELERY_BROKER_URL
 from celery import group
 import requests
+from multiprocessing.dummy import Pool as ThreadPool 
+from functools import partial
+# pending:
+# Close spider
+# Processing
+
 
 requests.adapters.DEFAULT_RETRIES = 5
 app = Celery('customcrawler', broker=CELERY_BROKER_URL)
@@ -109,8 +115,15 @@ def processURLsforchecking(reservoir, job_data_id):
     job = group((app.signature(process_urls_async, (url, job_data_id)) for url in reservoir if url))
     job.apply_async()
 
+def threadProcess(reservoir, job_data_id):
+    pool = ThreadPool(4)  # Make the Pool of workers
+    func = partial(processForLoop, job_data_id)
+    pool.map(func, reservoir) #Open the urls in their own threads
+    pool.close() #close the pool and wait for the work to finish 
+    pool.join()
 
-def processForLoop(base_url, job_data_id):
+
+def processForLoop(job_data_id, base_url):
         
         url = AXE_CHECKER_URL + base_url
         
@@ -119,7 +132,8 @@ def processForLoop(base_url, job_data_id):
         # r = requests.get(url, headers=headers)
 
         try:
-            r = requests.get(url, headers=headers)
+            r = session_retry.get(url=url, headers=headers)
+            # r = requests.get(url, headers=headers)
         except:
             return
 
