@@ -116,7 +116,7 @@ def processURLsforchecking(reservoir, job_data_id):
     job.apply_async()
 
 def threadProcess(reservoir, job_data_id):
-    str_list = list(filter( bool, str_list))
+    reservoir = list(filter( bool, reservoir))
     pool = ThreadPool(4)  # Make the Pool of workers
     func = partial(processForLoop, job_data_id)
     pool.map(func, reservoir) #Open the urls in their own threads
