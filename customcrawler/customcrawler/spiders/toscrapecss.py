@@ -18,7 +18,7 @@ class ToScrapeCSSSpider(CrawlSpider):
         self.allowed_domains = [self.domain]
         # self.custom_settings = {'CLOSESPIDER_PAGECOUNT': 10}
         self.regex_string = r'.*'+re.escape(self.domain)+ r'.*'
-        ToScrapeCSSSpider.rules = [Rule(LinkExtractor(allow=(self.regex_string)), callback='parse_item', follow=True)]
+        ToScrapeCSSSpider.rules = [Rule(LinkExtractor(allow=(self.regex_string)),deny=('\.pdf', '\.zip')), callback='parse_item', follow=True)]
         
         super(ToScrapeCSSSpider, self).__init__(*args, **kwargs)
 
