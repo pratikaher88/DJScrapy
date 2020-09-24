@@ -2,7 +2,7 @@ from urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
 import requests
 
-def retry_session(retries ,session=None, backoff_factor=0.5, status_forcelist=(500, 502, 503, 504)):
+def retry_session(retries ,session=None, backoff_factor=0.3, status_forcelist=(500, 502, 503, 504)):
     session = session or requests.Session()
     retry = Retry(
         total=retries,
@@ -11,6 +11,7 @@ def retry_session(retries ,session=None, backoff_factor=0.5, status_forcelist=(5
         backoff_factor=backoff_factor,
         status_forcelist=status_forcelist,
     )
+    retry.BACKOFF_MAX = 20
     adapter = HTTPAdapter(max_retries=retry)
     session.mount('http://', adapter)
     session.mount('https://', adapter)

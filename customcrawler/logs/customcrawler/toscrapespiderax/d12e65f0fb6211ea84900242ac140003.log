@@ -1,0 +1,638 @@
+2020-09-20 17:00:45 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: customcrawler)
+2020-09-20 17:00:45 [scrapy.utils.log] INFO: Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.6.12 (default, Sep 10 2020, 17:53:20) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.19.76-linuxkit-x86_64-with-debian-10.5
+2020-09-20 17:00:45 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'customcrawler', 'CLOSESPIDER_PAGECOUNT': '100', 'CLOSESPIDER_TIMEOUT': '0', 'CONCURRENT_REQUESTS': 32, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/customcrawler/toscrapespiderax/d12e65f0fb6211ea84900242ac140003.log', 'NEWSPIDER_MODULE': 'customcrawler.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['customcrawler.spiders']}
+2020-09-20 17:00:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2020-09-20 17:00:46 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-09-20 17:00:46 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-09-20 17:00:46 [scrapy.middleware] INFO: Enabled item pipelines:
+['customcrawler.pipelines.ScrapyAppPipeline']
+2020-09-20 17:00:46 [scrapy.core.engine] INFO: Spider opened
+2020-09-20 17:00:46 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-09-20 17:00:46 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2020-09-20 17:00:56 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://www.varam.gov.lv/> from <GET http://www.varam.gov.lv/>
+2020-09-20 17:01:00 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.varam.gov.lv/lv> from <GET https://www.varam.gov.lv/>
+2020-09-20 17:01:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv> (referer: None)
+2020-09-20 17:01:04 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.varam.gov.lv/lv> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-09-20 17:01:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/darbinieks/arturs-toms-pless> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/darbinieks/arturs-toms-pless>
+{'extracted_url': 'https://www.varam.gov.lv/lv/darbinieks/arturs-toms-pless'}
+2020-09-20 17:01:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/viegli-lasit> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/viegli-lasit>
+{'extracted_url': 'https://www.varam.gov.lv/lv/viegli-lasit'}
+2020-09-20 17:01:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ipasi-aizsargajamas-dabas-teritorijas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ipasi-aizsargajamas-dabas-teritorijas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ipasi-aizsargajamas-dabas-teritorijas'}
+2020-09-20 17:01:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv#content-area> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/node/4> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv>
+{'extracted_url': 'https://www.varam.gov.lv/lv'}
+2020-09-20 17:01:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/sugu-un-biotopu-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/node/4>
+{'extracted_url': 'https://www.varam.gov.lv/lv/node/4'}
+2020-09-20 17:01:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/par-mums> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/sugu-un-biotopu-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/sugu-un-biotopu-aizsardziba'}
+2020-09-20 17:01:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/darbibas-jomas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/invazivas-sugas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/par-mums>
+{'extracted_url': 'https://www.varam.gov.lv/lv/par-mums'}
+2020-09-20 17:01:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/no-gmo-brivas-teritorijas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/darbibas-jomas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/darbibas-jomas'}
+2020-09-20 17:01:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/invazivas-sugas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/invazivas-sugas'}
+2020-09-20 17:01:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/daudzpusejie-sadarbibas-ligumi-dabas-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/no-gmo-brivas-teritorijas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/no-gmo-brivas-teritorijas'}
+2020-09-20 17:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/daudzpusejie-sadarbibas-ligumi-dabas-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/daudzpusejie-sadarbibas-ligumi-dabas-aizsardziba'}
+2020-09-20 17:01:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/dabas-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi'}
+2020-09-20 17:01:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/digitala-transformacija-0> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti>
+{'extracted_url': 'https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti'}
+2020-09-20 17:01:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/dabas-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/dabas-aizsardziba'}
+2020-09-20 17:01:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/valsts-un-pasvaldibas-vienotais-klientu-apkalposanas-centru-tikls> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/digitala-transformacija-0>
+{'extracted_url': 'https://www.varam.gov.lv/lv/digitala-transformacija-0'}
+2020-09-20 17:01:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pakalpojumu-dizains> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/valsts-un-pasvaldibas-vienotais-klientu-apkalposanas-centru-tikls>
+{'extracted_url': 'https://www.varam.gov.lv/lv/valsts-un-pasvaldibas-vienotais-klientu-apkalposanas-centru-tikls'}
+2020-09-20 17:01:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pakalpojumu-dizains>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pakalpojumu-dizains'}
+2020-09-20 17:01:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ikt-parvaldiba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ikt-parvaldiba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ikt-parvaldiba'}
+2020-09-20 17:01:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam'}
+2020-09-20 17:01:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/fondi-un-investicijas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/klimata-parmainas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/fondi-un-investicijas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/fondi-un-investicijas'}
+2020-09-20 17:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/klimata-parmainas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/klimata-parmainas'}
+2020-09-20 17:01:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seg-monitorings-un-zinosana> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/strukturvieniba/klimata-parmainu-departaments> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminari-klimata-parmainu-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seg-monitorings-un-zinosana>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seg-monitorings-un-zinosana'}
+2020-09-20 17:01:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/strukturvieniba/klimata-parmainu-departaments>
+{'extracted_url': 'https://www.varam.gov.lv/lv/strukturvieniba/klimata-parmainu-departaments'}
+2020-09-20 17:01:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/normativie-akti-klimata-politikas-ieviesanai> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/emisijas-vienibu-tirdznieciba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/projekti-1> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminari-klimata-parmainu-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminari-klimata-parmainu-joma'}
+2020-09-20 17:01:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/normativie-akti-klimata-politikas-ieviesanai>
+{'extracted_url': 'https://www.varam.gov.lv/lv/normativie-akti-klimata-politikas-ieviesanai'}
+2020-09-20 17:01:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/siltumnicefekta-gazu-emisiju-aprekina-metodika> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/emisijas-vienibu-tirdznieciba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/emisijas-vienibu-tirdznieciba'}
+2020-09-20 17:01:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/projekti-1>
+{'extracted_url': 'https://www.varam.gov.lv/lv/projekti-1'}
+2020-09-20 17:01:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pasvaldibas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi'}
+2020-09-20 17:01:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/siltumnicefekta-gazu-emisiju-aprekina-metodika>
+{'extracted_url': 'https://www.varam.gov.lv/lv/siltumnicefekta-gazu-emisiju-aprekina-metodika'}
+2020-09-20 17:01:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pasvaldibas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pasvaldibas'}
+2020-09-20 17:01:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pasvaldibu-saistosie-noteikumi-0> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pasvaldibu-saistosie-noteikumi-0>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pasvaldibu-saistosie-noteikumi-0'}
+2020-09-20 17:01:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pasvaldibu-publiskie-gada-parskati> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pasvaldibu-publiskie-gada-parskati>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pasvaldibu-publiskie-gada-parskati'}
+2020-09-20 17:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem>
+{'extracted_url': 'https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem'}
+2020-09-20 17:01:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu'}
+2020-09-20 17:01:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma'}
+2020-09-20 17:01:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi'}
+2020-09-20 17:01:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam>
+{'extracted_url': 'https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam'}
+2020-09-20 17:01:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/informacija-pasvaldibam> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/normativie-akti-4> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/informacija-pasvaldibam>
+{'extracted_url': 'https://www.varam.gov.lv/lv/informacija-pasvaldibam'}
+2020-09-20 17:01:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/normativie-akti-4>
+{'extracted_url': 'https://www.varam.gov.lv/lv/normativie-akti-4'}
+2020-09-20 17:01:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/biezak-uzdotie-jautajumi-par-pasvaldibu-darbibu> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/biezak-uzdotie-jautajumi-par-pasvaldibu-darbibu>
+{'extracted_url': 'https://www.varam.gov.lv/lv/biezak-uzdotie-jautajumi-par-pasvaldibu-darbibu'}
+2020-09-20 17:01:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/administrativi-teritoriala-iedalijuma-terminu-tulkojumi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/administrativi-teritoriala-iedalijuma-terminu-tulkojumi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/administrativi-teritoriala-iedalijuma-terminu-tulkojumi'}
+2020-09-20 17:01:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/regionala-politika-2021-2027> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/regionala-politika-2021-2027>
+{'extracted_url': 'https://www.varam.gov.lv/lv/regionala-politika-2021-2027'}
+2020-09-20 17:01:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai>
+{'extracted_url': 'https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai'}
+2020-09-20 17:01:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/projekti-0> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/projekti-0>
+{'extracted_url': 'https://www.varam.gov.lv/lv/projekti-0'}
+2020-09-20 17:01:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/regionalais-remigracijas-atbalsts> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/regionalais-remigracijas-atbalsts>
+{'extracted_url': 'https://www.varam.gov.lv/lv/regionalais-remigracijas-atbalsts'}
+2020-09-20 17:01:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/regionala-attistiba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/regionala-attistiba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/regionala-attistiba'}
+2020-09-20 17:01:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/nacionala-regionalas-attistibas-padome> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/nacionala-regionalas-attistibas-padome>
+{'extracted_url': 'https://www.varam.gov.lv/lv/nacionala-regionalas-attistibas-padome'}
+2020-09-20 17:01:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/valsts-atbalsta-instrumenti> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/valsts-atbalsta-instrumenti>
+{'extracted_url': 'https://www.varam.gov.lv/lv/valsts-atbalsta-instrumenti'}
+2020-09-20 17:01:46 [scrapy.extensions.logstats] INFO: Crawled 49 pages (at 49 pages/min), scraped 48 items (at 48 items/min)
+2020-09-20 17:01:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/regionalas-attistibas-uzraudziba-un-novertesana> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/regionalas-attistibas-uzraudziba-un-novertesana>
+{'extracted_url': 'https://www.varam.gov.lv/lv/regionalas-attistibas-uzraudziba-un-novertesana'}
+2020-09-20 17:01:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali>
+{'extracted_url': 'https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali'}
+2020-09-20 17:01:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/planosanas-regioni> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/planosanas-regioni>
+{'extracted_url': 'https://www.varam.gov.lv/lv/planosanas-regioni'}
+2020-09-20 17:01:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/regionalas-attistibas-trispusejas-sadarbibas-apakspadome> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/regionalas-attistibas-trispusejas-sadarbibas-apakspadome>
+{'extracted_url': 'https://www.varam.gov.lv/lv/regionalas-attistibas-trispusejas-sadarbibas-apakspadome'}
+2020-09-20 17:01:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pilsetu-attistibas-jautajumi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pilsetu-attistibas-jautajumi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pilsetu-attistibas-jautajumi'}
+2020-09-20 17:01:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/metodiskie-ieteikumi-attistibas-programmu-izstradei> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/metodiskie-ieteikumi-attistibas-programmu-izstradei>
+{'extracted_url': 'https://www.varam.gov.lv/lv/metodiskie-ieteikumi-attistibas-programmu-izstradei'}
+2020-09-20 17:01:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-regionalas-attistibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/attistibas-planosanas-dokumenti> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/normativie-akti> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-regionalas-attistibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-regionalas-attistibas-joma'}
+2020-09-20 17:01:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/teritorijas-attistibas-planosana> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/attistibas-planosanas-dokumenti>
+{'extracted_url': 'https://www.varam.gov.lv/lv/attistibas-planosanas-dokumenti'}
+2020-09-20 17:01:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/normativie-akti>
+{'extracted_url': 'https://www.varam.gov.lv/lv/normativie-akti'}
+2020-09-20 17:01:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pirmsskolas-izglitibas-iestazu-pieejamiba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:01:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma'}
+2020-09-20 17:01:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/teritorijas-attistibas-planosana>
+{'extracted_url': 'https://www.varam.gov.lv/lv/teritorijas-attistibas-planosana'}
+2020-09-20 17:01:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pirmsskolas-izglitibas-iestazu-pieejamiba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pirmsskolas-izglitibas-iestazu-pieejamiba'}
+2020-09-20 17:02:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/nacionala-limena-teritorijas-planosana> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/nacionala-limena-teritorijas-planosana>
+{'extracted_url': 'https://www.varam.gov.lv/lv/nacionala-limena-teritorijas-planosana'}
+2020-09-20 17:02:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/normativie-akti-5> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/teritorijas-attistibas-planosanas-informacijas-sistema-tapis> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/normativie-akti-5>
+{'extracted_url': 'https://www.varam.gov.lv/lv/normativie-akti-5'}
+2020-09-20 17:02:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/teritorijas-attistibas-planosanas-informacijas-sistema-tapis>
+{'extracted_url': 'https://www.varam.gov.lv/lv/teritorijas-attistibas-planosanas-informacijas-sistema-tapis'}
+2020-09-20 17:02:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ainavu-politika> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/starptautiskas-iniciativas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ainavu-politika>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ainavu-politika'}
+2020-09-20 17:02:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/zemes-politika> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/starptautiskas-iniciativas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/starptautiskas-iniciativas'}
+2020-09-20 17:02:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/zemes-politika>
+{'extracted_url': 'https://www.varam.gov.lv/lv/zemes-politika'}
+2020-09-20 17:02:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/vides-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/vides-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/vides-aizsardziba'}
+2020-09-20 17:02:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/aktualitates-vides-aizsardzibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/aktualitates-vides-aizsardzibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/aktualitates-vides-aizsardzibas-joma'}
+2020-09-20 17:02:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/par-pasvaldibu-teritorijas-attistibas-planosanas-dokumentu-izstradi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/par-pasvaldibu-teritorijas-attistibas-planosanas-dokumentu-izstradi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/par-pasvaldibu-teritorijas-attistibas-planosanas-dokumentu-izstradi'}
+2020-09-20 17:02:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminari> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminari>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminari'}
+2020-09-20 17:02:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/aizsargjoslas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/vadlinijas-par-teritorijas-attistibas-planosanai-izmanojamiem-geotelpiskajiem-datiem> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/aizsargjoslas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/aizsargjoslas'}
+2020-09-20 17:02:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/zemes-parvaldibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/atkritumu-apsaimniekosana> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/vadlinijas-par-teritorijas-attistibas-planosanai-izmanojamiem-geotelpiskajiem-datiem>
+{'extracted_url': 'https://www.varam.gov.lv/lv/vadlinijas-par-teritorijas-attistibas-planosanai-izmanojamiem-geotelpiskajiem-datiem'}
+2020-09-20 17:02:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/zemes-parvaldibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/zemes-parvaldibas-joma'}
+2020-09-20 17:02:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/atkritumu-apsaimniekosana>
+{'extracted_url': 'https://www.varam.gov.lv/lv/atkritumu-apsaimniekosana'}
+2020-09-20 17:02:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/augsnes-kvalitate> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/metodiskie-materiali-teritorijas-attistibas-planosanas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/augsnes-kvalitate>
+{'extracted_url': 'https://www.varam.gov.lv/lv/augsnes-kvalitate'}
+2020-09-20 17:02:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/dabas-resursu-nodoklis> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/iepakojums> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/metodiskie-materiali-teritorijas-attistibas-planosanas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/metodiskie-materiali-teritorijas-attistibas-planosanas-joma'}
+2020-09-20 17:02:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/gaisa-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/dabas-resursu-nodoklis>
+{'extracted_url': 'https://www.varam.gov.lv/lv/dabas-resursu-nodoklis'}
+2020-09-20 17:02:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/iepakojums>
+{'extracted_url': 'https://www.varam.gov.lv/lv/iepakojums'}
+2020-09-20 17:02:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ietekmes-uz-vidi-novertejums> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/gaisa-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/gaisa-aizsardziba'}
+2020-09-20 17:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ietekmes-uz-vidi-novertejums>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ietekmes-uz-vidi-novertejums'}
+2020-09-20 17:02:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/juras-vides-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/juras-vides-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/juras-vides-aizsardziba'}
+2020-09-20 17:02:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/kimiskas-vielas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/kimiskas-vielas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/kimiskas-vielas'}
+2020-09-20 17:02:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/piesarnojums> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/piesarnojums>
+{'extracted_url': 'https://www.varam.gov.lv/lv/piesarnojums'}
+2020-09-20 17:02:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/radiacijas-drosiba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/radiacijas-drosiba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/radiacijas-drosiba'}
+2020-09-20 17:02:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ozona-slana-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ozona-slana-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ozona-slana-aizsardziba'}
+2020-09-20 17:02:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/vides-troksnis> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/vides-troksnis>
+{'extracted_url': 'https://www.varam.gov.lv/lv/vides-troksnis'}
+2020-09-20 17:02:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/vides-informacija-un-sabiedribas-lidzdaliba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/vides-informacija-un-sabiedribas-lidzdaliba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/vides-informacija-un-sabiedribas-lidzdaliba'}
+2020-09-20 17:02:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/noturigie-organiskie-piesarnotaji> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/noturigie-organiskie-piesarnotaji>
+{'extracted_url': 'https://www.varam.gov.lv/lv/noturigie-organiskie-piesarnotaji'}
+2020-09-20 17:02:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/zalais-publiskais-iepirkums> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/zalais-publiskais-iepirkums>
+{'extracted_url': 'https://www.varam.gov.lv/lv/zalais-publiskais-iepirkums'}
+2020-09-20 17:02:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/zemes-dziles> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/zemes-dziles>
+{'extracted_url': 'https://www.varam.gov.lv/lv/zemes-dziles'}
+2020-09-20 17:02:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/sadarbibas-partneru-pieredze> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/sadarbibas-partneru-pieredze>
+{'extracted_url': 'https://www.varam.gov.lv/lv/sadarbibas-partneru-pieredze'}
+2020-09-20 17:02:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/vides-zinatne-izglitiba-un-izglitiba-ilgtspejigai-attistibai> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/vides-zinatne-izglitiba-un-izglitiba-ilgtspejigai-attistibai>
+{'extracted_url': 'https://www.varam.gov.lv/lv/vides-zinatne-izglitiba-un-izglitiba-ilgtspejigai-attistibai'}
+2020-09-20 17:02:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/eiropas-komisijas-izstradatie-ieteikumi-zala-publiska-iepirkuma-piemerosanai> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/udens-aizsardziba> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/eiropas-komisijas-izstradatie-ieteikumi-zala-publiska-iepirkuma-piemerosanai>
+{'extracted_url': 'https://www.varam.gov.lv/lv/eiropas-komisijas-izstradatie-ieteikumi-zala-publiska-iepirkuma-piemerosanai'}
+2020-09-20 17:02:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/udens-aizsardziba>
+{'extracted_url': 'https://www.varam.gov.lv/lv/udens-aizsardziba'}
+2020-09-20 17:02:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/videi-kaitigo-precu-atkritumu-apsaimniekosana> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/videi-kaitigo-precu-atkritumu-apsaimniekosana>
+{'extracted_url': 'https://www.varam.gov.lv/lv/videi-kaitigo-precu-atkritumu-apsaimniekosana'}
+2020-09-20 17:02:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/biezak-uzdotie-jautajumi-buj> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/biezak-uzdotie-jautajumi-buj>
+{'extracted_url': 'https://www.varam.gov.lv/lv/biezak-uzdotie-jautajumi-buj'}
+2020-09-20 17:02:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/pakalpojumi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/pakalpojumi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/pakalpojumi'}
+2020-09-20 17:02:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/normativais-regulejums-un-metodiskais-atbalsts> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/normativais-regulejums-un-metodiskais-atbalsts>
+{'extracted_url': 'https://www.varam.gov.lv/lv/normativais-regulejums-un-metodiskais-atbalsts'}
+2020-09-20 17:02:46 [scrapy.extensions.logstats] INFO: Crawled 99 pages (at 50 pages/min), scraped 98 items (at 50 items/min)
+2020-09-20 17:02:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/padotiba-esosas-iestades> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:47 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2020-09-20 17:02:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/padotibas-iestades> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/padotiba-esosas-iestades>
+{'extracted_url': 'https://www.varam.gov.lv/lv/padotiba-esosas-iestades'}
+2020-09-20 17:02:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/padotibas-iestades>
+{'extracted_url': 'https://www.varam.gov.lv/lv/padotibas-iestades'}
+2020-09-20 17:02:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/kapitalsabiedribas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-un-parskati> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/kapitalsabiedribas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/kapitalsabiedribas'}
+2020-09-20 17:02:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-un-parskati>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-un-parskati'}
+2020-09-20 17:02:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas'}
+2020-09-20 17:02:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/informativie-un-audiovizualie-materiali> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/informativie-un-audiovizualie-materiali>
+{'extracted_url': 'https://www.varam.gov.lv/lv/informativie-un-audiovizualie-materiali'}
+2020-09-20 17:02:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-ilgtspejigas-attistibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-ilgtspejigas-attistibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-ilgtspejigas-attistibas-joma'}
+2020-09-20 17:02:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-publisko-pakalpojumu-pilnveides-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-publisko-pakalpojumu-pilnveides-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-publisko-pakalpojumu-pilnveides-joma'}
+2020-09-20 17:02:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-vides-aizsardzibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:02:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-vides-aizsardzibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-vides-aizsardzibas-joma'}
+2020-09-20 17:03:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-dabas-aizsardzibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-dabas-aizsardzibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-dabas-aizsardzibas-joma'}
+2020-09-20 17:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-e-pakalpojumu-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ministrijas-publiskais-gada-parskats> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-e-pakalpojumu-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-e-pakalpojumu-joma'}
+2020-09-20 17:03:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ministrijas-publiskais-gada-parskats>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ministrijas-publiskais-gada-parskats'}
+2020-09-20 17:03:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publikacijas-investiciju-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publikacijas-investiciju-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publikacijas-investiciju-joma'}
+2020-09-20 17:03:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/publiskie-gada-parskati> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/publiskie-gada-parskati>
+{'extracted_url': 'https://www.varam.gov.lv/lv/publiskie-gada-parskati'}
+2020-09-20 17:03:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/ministrijas-padoto-instituciju-publiskie-gada-parskati> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/ministrijas-padoto-instituciju-publiskie-gada-parskati>
+{'extracted_url': 'https://www.varam.gov.lv/lv/ministrijas-padoto-instituciju-publiskie-gada-parskati'}
+2020-09-20 17:03:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/citi-dokumenti-vides-aizsardzibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/citi-dokumenti-vides-aizsardzibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/citi-dokumenti-vides-aizsardzibas-joma'}
+2020-09-20 17:03:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/metodiskie-materiali-e-parvaldes-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/metodiskie-materiali-e-parvaldes-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/metodiskie-materiali-e-parvaldes-joma'}
+2020-09-20 17:03:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/metodiskie-materiali-vides-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/metodiskie-materiali-vides-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/metodiskie-materiali-vides-joma'}
+2020-09-20 17:03:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/metodiskie-materiali> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminaru-materiali> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/metodiskie-materiali>
+{'extracted_url': 'https://www.varam.gov.lv/lv/metodiskie-materiali'}
+2020-09-20 17:03:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminaru-materiali>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminaru-materiali'}
+2020-09-20 17:03:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminaru-materiali-e-parvaldes-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminaru-materiali-e-parvaldes-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminaru-materiali-e-parvaldes-joma'}
+2020-09-20 17:03:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminaru-materiali-klimata-parmainu-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminaru-materiali-klimata-parmainu-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminaru-materiali-klimata-parmainu-joma'}
+2020-09-20 17:03:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminaru-materiali-vides-aizsardzibas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminaru-materiali-vides-aizsardzibas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminaru-materiali-vides-aizsardzibas-joma'}
+2020-09-20 17:03:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminaru-materiali-pasvaldibu-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminaru-materiali-pasvaldibu-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminaru-materiali-pasvaldibu-joma'}
+2020-09-20 17:03:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminaru-materiali-publisko-pakalpojumu-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminaru-materiali-publisko-pakalpojumu-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminaru-materiali-publisko-pakalpojumu-joma'}
+2020-09-20 17:03:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/petijumi> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/petijumi>
+{'extracted_url': 'https://www.varam.gov.lv/lv/petijumi'}
+2020-09-20 17:03:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/seminaru-materiali-teritorijas-attistibas-planosanas-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/seminaru-materiali-teritorijas-attistibas-planosanas-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/seminaru-materiali-teritorijas-attistibas-planosanas-joma'}
+2020-09-20 17:03:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/informacija-par-seminariem-un-materiali-varam-kompetence-esosajiem-fondiem> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/petijumi-e-parvaldes-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/informacija-par-seminariem-un-materiali-varam-kompetence-esosajiem-fondiem>
+{'extracted_url': 'https://www.varam.gov.lv/lv/informacija-par-seminariem-un-materiali-varam-kompetence-esosajiem-fondiem'}
+2020-09-20 17:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/petijumi-e-parvaldes-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/petijumi-e-parvaldes-joma'}
+2020-09-20 17:03:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.varam.gov.lv/lv/petijumi-publisko-pakalpojumu-pilnveides-joma> (referer: https://www.varam.gov.lv/lv)
+2020-09-20 17:03:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.varam.gov.lv/lv/petijumi-publisko-pakalpojumu-pilnveides-joma>
+{'extracted_url': 'https://www.varam.gov.lv/lv/petijumi-publisko-pakalpojumu-pilnveides-joma'}
+2020-09-20 17:03:46 [scrapy.extensions.logstats] INFO: Crawled 129 pages (at 30 pages/min), scraped 128 items (at 30 items/min)
+2020-09-20 17:04:04 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.varam.gov.lv/lv/darbinieks/edvins-balsevics> (failed 1 times): User timeout caused connection failure: Getting https://www.varam.gov.lv/lv/darbinieks/edvins-balsevics took longer than 180.0 seconds..
+2020-09-20 17:04:04 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.varam.gov.lv/lv/struktura> (failed 1 times): User timeout caused connection failure: Getting https://www.varam.gov.lv/lv/struktura took longer than 180.0 seconds..
+2020-09-20 17:04:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2020-09-20 17:04:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (2): axe.checkers.eiii.eu
+2020-09-20 17:04:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (3): axe.checkers.eiii.eu
+2020-09-20 17:04:04 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (4): axe.checkers.eiii.eu
+2020-09-20 17:04:18 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/seg-monitorings-un-zinosana HTTP/1.1" 200 None
+2020-09-20 17:04:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/darbinieks/arturs-toms-pless HTTP/1.1" 200 None
+2020-09-20 17:04:29 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/darbibas-jomas HTTP/1.1" 200 None
+2020-09-20 17:04:41 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/digitala-transformacija-0 HTTP/1.1" 200 None
+2020-09-20 17:04:54 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/strukturvieniba/klimata-parmainu-departaments HTTP/1.1" 200 None
+2020-09-20 17:05:07 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/siltumnicefekta-gazu-emisiju-aprekina-metodika HTTP/1.1" 200 None
+2020-09-20 17:05:19 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/invazivas-sugas HTTP/1.1" 200 None
+2020-09-20 17:05:33 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-un-pasvaldibas-vienotais-klientu-apkalposanas-centru-tikls HTTP/1.1" 200 None
+2020-09-20 17:05:46 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/seminari-klimata-parmainu-joma HTTP/1.1" 200 None
+2020-09-20 17:05:58 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pasvaldibas HTTP/1.1" 200 None
+2020-09-20 17:06:11 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/no-gmo-brivas-teritorijas HTTP/1.1" 200 None
+2020-09-20 17:06:24 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pakalpojumu-dizains HTTP/1.1" 200 None
+2020-09-20 17:06:37 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti-klimata-politikas-ieviesanai HTTP/1.1" 200 None
+2020-09-20 17:06:51 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pasvaldibu-saistosie-noteikumi-0 HTTP/1.1" 200 None
+2020-09-20 17:07:03 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/daudzpusejie-sadarbibas-ligumi-dabas-aizsardziba HTTP/1.1" 200 None
+2020-09-20 17:07:14 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikt-parvaldiba HTTP/1.1" 200 None
+2020-09-20 17:07:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/emisijas-vienibu-tirdznieciba HTTP/1.1" 200 None
+2020-09-20 17:07:37 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pasvaldibu-publiskie-gada-parskati HTTP/1.1" 200 None
+2020-09-20 17:08:04 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi HTTP/1.1" 504 182
+2020-09-20 17:08:04 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:08:04 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi
+2020-09-20 17:08:16 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam HTTP/1.1" 504 182
+2020-09-20 17:08:16 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:08:16 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam
+2020-09-20 17:08:31 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1 HTTP/1.1" 504 182
+2020-09-20 17:08:31 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:08:31 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1
+2020-09-20 17:08:39 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem HTTP/1.1" 504 182
+2020-09-20 17:08:39 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:08:39 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem
+2020-09-20 17:09:04 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi HTTP/1.1" 504 182
+2020-09-20 17:09:04 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:09:05 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi
+2020-09-20 17:09:16 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam HTTP/1.1" 504 182
+2020-09-20 17:09:16 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:09:17 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam
+2020-09-20 17:09:31 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1 HTTP/1.1" 504 182
+2020-09-20 17:09:31 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:09:31 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1
+2020-09-20 17:09:39 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem HTTP/1.1" 504 182
+2020-09-20 17:09:39 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:09:40 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem
+2020-09-20 17:10:05 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi HTTP/1.1" 504 182
+2020-09-20 17:10:05 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:10:06 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi
+2020-09-20 17:10:17 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam HTTP/1.1" 504 182
+2020-09-20 17:10:17 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:10:18 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam
+2020-09-20 17:10:32 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1 HTTP/1.1" 504 182
+2020-09-20 17:10:32 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:10:33 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1
+2020-09-20 17:10:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem HTTP/1.1" 504 182
+2020-09-20 17:10:40 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:10:41 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem
+2020-09-20 17:11:06 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/valsts-parvaldes-pakalpojumi HTTP/1.1" 504 182
+2020-09-20 17:11:18 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/pielagosanas-klimata-parmainam HTTP/1.1" 504 182
+2020-09-20 17:11:30 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-1 HTTP/1.1" 200 None
+2020-09-20 17:11:42 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/lidzekli-neparedzetiem-gadijumiem HTTP/1.1" 504 182
+2020-09-20 17:12:07 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti HTTP/1.1" 504 182
+2020-09-20 17:12:07 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:12:07 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti
+2020-09-20 17:12:19 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas HTTP/1.1" 504 182
+2020-09-20 17:12:19 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:12:19 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas
+2020-09-20 17:12:33 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi HTTP/1.1" 504 182
+2020-09-20 17:12:33 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:12:33 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi
+2020-09-20 17:12:42 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu HTTP/1.1" 504 182
+2020-09-20 17:12:42 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:12:42 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu
+2020-09-20 17:13:07 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti HTTP/1.1" 504 182
+2020-09-20 17:13:07 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:13:07 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti
+2020-09-20 17:13:19 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas HTTP/1.1" 504 182
+2020-09-20 17:13:19 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:13:19 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas
+2020-09-20 17:13:33 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi HTTP/1.1" 504 182
+2020-09-20 17:13:33 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:13:33 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi
+2020-09-20 17:13:42 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu HTTP/1.1" 504 182
+2020-09-20 17:13:42 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:13:43 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu
+2020-09-20 17:14:08 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti HTTP/1.1" 504 182
+2020-09-20 17:14:08 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:14:09 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti
+2020-09-20 17:14:20 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas HTTP/1.1" 504 182
+2020-09-20 17:14:20 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:14:21 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas
+2020-09-20 17:14:34 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi HTTP/1.1" 504 182
+2020-09-20 17:14:34 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:14:35 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi
+2020-09-20 17:14:43 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu HTTP/1.1" 504 182
+2020-09-20 17:14:43 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:14:44 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu
+2020-09-20 17:15:09 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardzibas-projekti HTTP/1.1" 504 182
+2020-09-20 17:15:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/fondi-un-investicijas HTTP/1.1" 504 182
+2020-09-20 17:15:35 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/zinojumi-tsk-petijumi HTTP/1.1" 504 182
+2020-09-20 17:15:45 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/ikgadejas-sarunas-ar-latvijas-pasvaldibu-savienibu HTTP/1.1" 504 182
+2020-09-20 17:16:09 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba HTTP/1.1" 504 182
+2020-09-20 17:16:09 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:16:09 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba
+2020-09-20 17:16:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas HTTP/1.1" 504 182
+2020-09-20 17:16:21 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:16:21 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas
+2020-09-20 17:16:35 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi HTTP/1.1" 504 182
+2020-09-20 17:16:35 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:16:35 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi
+2020-09-20 17:16:45 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma HTTP/1.1" 504 182
+2020-09-20 17:16:45 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:16:45 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma
+2020-09-20 17:17:09 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba HTTP/1.1" 504 182
+2020-09-20 17:17:09 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:17:10 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba
+2020-09-20 17:17:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas HTTP/1.1" 504 182
+2020-09-20 17:17:21 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:17:22 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas
+2020-09-20 17:17:35 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi HTTP/1.1" 504 182
+2020-09-20 17:17:35 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:17:36 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi
+2020-09-20 17:17:45 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma HTTP/1.1" 504 182
+2020-09-20 17:17:45 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:17:46 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma
+2020-09-20 17:18:10 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba HTTP/1.1" 504 182
+2020-09-20 17:18:10 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:18:12 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba
+2020-09-20 17:18:22 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas HTTP/1.1" 504 182
+2020-09-20 17:18:22 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:18:23 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas
+2020-09-20 17:18:36 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi HTTP/1.1" 504 182
+2020-09-20 17:18:36 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:18:37 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi
+2020-09-20 17:18:46 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma HTTP/1.1" 504 182
+2020-09-20 17:18:46 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:18:47 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma
+2020-09-20 17:19:12 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/dabas-aizsardziba HTTP/1.1" 504 182
+2020-09-20 17:19:23 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/klimata-parmainas HTTP/1.1" 504 182
+2020-09-20 17:19:38 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/republikas-pilsetas-un-novadi HTTP/1.1" 504 182
+2020-09-20 17:19:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/administrativi-teritoriala-reforma HTTP/1.1" 504 182
+2020-09-20 17:20:12 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai HTTP/1.1" 504 182
+2020-09-20 17:20:12 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:20:12 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai
+2020-09-20 17:20:24 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali HTTP/1.1" 504 182
+2020-09-20 17:20:24 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:20:24 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali
+2020-09-20 17:20:38 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam HTTP/1.1" 504 182
+2020-09-20 17:20:38 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:20:38 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam
+2020-09-20 17:20:47 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti HTTP/1.1" 504 182
+2020-09-20 17:20:47 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:20:47 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti
+2020-09-20 17:21:12 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai HTTP/1.1" 504 182
+2020-09-20 17:21:12 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:21:13 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai
+2020-09-20 17:21:24 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali HTTP/1.1" 504 182
+2020-09-20 17:21:24 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:21:24 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali
+2020-09-20 17:21:38 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam HTTP/1.1" 504 182
+2020-09-20 17:21:38 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:21:39 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam
+2020-09-20 17:21:48 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti HTTP/1.1" 504 182
+2020-09-20 17:21:48 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:21:48 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti
+2020-09-20 17:22:13 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai HTTP/1.1" 504 182
+2020-09-20 17:22:13 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:22:14 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai
+2020-09-20 17:22:25 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali HTTP/1.1" 504 182
+2020-09-20 17:22:25 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:22:26 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali
+2020-09-20 17:22:39 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam HTTP/1.1" 504 182
+2020-09-20 17:22:39 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:22:40 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam
+2020-09-20 17:22:48 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti HTTP/1.1" 504 182
+2020-09-20 17:22:48 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:22:50 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti
+2020-09-20 17:23:15 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/atbalsts-pasvaldibam-arkartejas-situacijas-ietekmes-mazinasanai-un-noversanai HTTP/1.1" 504 182
+2020-09-20 17:23:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/regionalas-attistibas-koordinacijas-padomes-materiali HTTP/1.1" 504 182
+2020-09-20 17:23:40 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/metodiskie-materiali-pasvaldibam HTTP/1.1" 504 182
+2020-09-20 17:23:50 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/normativie-akti HTTP/1.1" 504 182
+2020-09-20 17:24:15 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0 HTTP/1.1" 504 182
+2020-09-20 17:24:15 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:24:15 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0
+2020-09-20 17:24:26 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni HTTP/1.1" 504 182
+2020-09-20 17:24:26 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:24:26 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni
+2020-09-20 17:24:41 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/informacija-pasvaldibam HTTP/1.1" 504 182
+2020-09-20 17:24:41 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/informacija-pasvaldibam'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:24:41 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/informacija-pasvaldibam
+2020-09-20 17:24:50 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma HTTP/1.1" 504 182
+2020-09-20 17:24:50 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:24:50 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma
+2020-09-20 17:25:16 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0 HTTP/1.1" 504 182
+2020-09-20 17:25:16 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:25:16 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0
+2020-09-20 17:25:27 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni HTTP/1.1" 504 182
+2020-09-20 17:25:27 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:25:27 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni
+2020-09-20 17:25:41 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/informacija-pasvaldibam HTTP/1.1" 504 182
+2020-09-20 17:25:41 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/informacija-pasvaldibam'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:25:41 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/informacija-pasvaldibam
+2020-09-20 17:25:50 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma HTTP/1.1" 504 182
+2020-09-20 17:25:50 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:25:51 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/petijumi-regionalas-attistibas-joma
+2020-09-20 17:26:16 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0 HTTP/1.1" 504 182
+2020-09-20 17:26:16 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:26:18 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/projekti-0
+2020-09-20 17:26:27 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni HTTP/1.1" 504 182
+2020-09-20 17:26:27 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni'): Retry(total=0, connect=3, read=3, redirect=None, status=None)
+2020-09-20 17:26:29 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.varam.gov.lv/lv/planosanas-regioni

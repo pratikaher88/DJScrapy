@@ -5,6 +5,11 @@ from scrapy.linkextractors import LinkExtractor
 from urllib.parse import urlparse
 
 import re
+import requests
+from customcrawler.retry_mechanism import retry_session
+
+session_retry = retry_session(retries=5)
+headers = {'User-Agent': 'Mozilla/5.0'}
 
 
 class ToScrapeCSSSpider(CrawlSpider):
@@ -13,12 +18,18 @@ class ToScrapeCSSSpider(CrawlSpider):
     def __init__(self, *args, **kwargs):
         self.job_data_id = kwargs.get('job_data_id', '1111')
         self.url = kwargs.get('url', "https://lovdata.no/")
+        self.limit_count = int(kwargs.get('limit_count',600))
+        if self.limit_count > 600:
+            self.limit_count = 600
         self.domain = urlparse(self.url).netloc
+        # self.domain = urlparse(session_retry.get(url=self.url, headers=headers,verify=False).url).netloc
+        # self.domain = urlparse(requests.get(url=self.url, headers=headers,verify=False).url).netloc
+
         self.start_urls = [self.url]
         self.allowed_domains = [self.domain]
         # self.custom_settings = {'CLOSESPIDER_PAGECOUNT': 10}
         self.regex_string = r'.*'+re.escape(self.domain)+ r'.*'
-        ToScrapeCSSSpider.rules = [Rule(LinkExtractor(allow=(self.regex_string),deny=('\.pdf', '\.zip')), callback='parse_item', follow=True)]
+        ToScrapeCSSSpider.rules = [Rule(LinkExtractor(allow=(self.regex_string),deny=('\.pdf', '\.zip', '\.docx')), callback='parse_item', follow=True)]
         
         super(ToScrapeCSSSpider, self).__init__(*args, **kwargs)
 

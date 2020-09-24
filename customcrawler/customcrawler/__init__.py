@@ -2,8 +2,8 @@ from __future__ import absolute_import, unicode_literals
 
 # This will make sure the app is always imported when
 # Django starts so that shared_task will use this app.
-from customcrawler.tasks import app as customcrawler
+# from customcrawler.tasks import app as customcrawler
 
-__all__ = ('customcrawler',)
+# __all__ = ('customcrawler',)
 
 

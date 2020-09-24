@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Job ID</th>
+            <th scope="col">Site Name</th>
+            <th scope="col">Average Score</th>
+            <th scope="col">Average Time</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for item in recent_runs_objects %}
+
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <th scope="row">{{ item.job_data_id }}</th>
+            <td><a href="{{ item.site_name }}">{{ item.site_name }}</a></td>
+            <th scope="row">{{ item.average_score }}</th>
+            <th scope="row">{{ item.average_time }}</th>
+
+        </tr>
+        
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+{% endblock content %}

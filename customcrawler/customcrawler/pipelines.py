@@ -5,10 +5,12 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
-from customcrawler.models import URL_details, TimeToCrawl, db_connect
+from customcrawler.models import URL_details, TimeToCrawl, db_connect, Recent_Runs
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
-from .tasks import process_urls_async, processURLsforchecking, processForLoop, threadProcess
+
+# from .tasks import process_urls_async, processURLsforchecking, processForLoop, threadProcess
+from .tasks import threadProcess
 import random
 import time 
 
@@ -22,13 +24,14 @@ class ScrapyAppPipeline(object):
         # self.reservoir_size = 600
 
     def open_spider(self,spider):
-        spider.started_on = datetime.now() # To calculate the time of calling
+        self.started_on = datetime.now() # To calculate the time of calling
 
         session = self.Session()
 
         try:
             # session.execute('''TRUNCATE TABLE main_quote''')
             session.execute('''TRUNCATE TABLE main_url_details''')
+            session.execute('''TRUNCATE TABLE main_recent_runs''')
             # session.commit()
 
         except:
@@ -70,26 +73,37 @@ class ScrapyAppPipeline(object):
 
     def close_spider(self, spider):
 
-        print(self.reservoir)
+        print(self.reservoir, spider.limit_count)
 
-        threadProcess(self.reservoir, spider.job_data_id)
+        threadProcess(self.reservoir[:int(spider.limit_count)], spider.job_data_id)
 
-        # processURLsforchecking(self.reservoir, spider.job_data_id)
+        # end_time = datetime.now() - spider.started_on
+        
+        # print("%s:%s.%s" % (end_time.hour  , end_time.minute, end_time.second))
 
-        # process_urls_async.delay(self.reservoir, spider.job_data_id)
+        end_time = datetime.now() - self.started_on
 
-        # for value in self.reservoir:
-        #     if value:
-        #         processForLoop(value,spider.job_data_id)
-                # process_urls_async.delay(value, spider.job_data_id)
+        # print(self.started_on)
 
-        # job = group((self.app.signature(process_urls_async, (url, spider.job_data_id)) for url in self.reservoir))  
+        session = self.Session()
 
-        # job.delay()
+        recent_runs = Recent_Runs()
 
-        # work_time = datetime.now() - spider.started_on (Time to Crawl)
+        recent_runs.job_data_id = spider.job_data_id
 
-        end_time = datetime.now() - spider.started_on
+        recent_runs.site_name = spider.domain
+
+        recent_runs.average_time = end_time
+        recent_runs.average_score = 99
+
+        try:
+            session.add(recent_runs)
+            session.commit()
+        except:
+            session.rollback()
+            raise
+
+        session.close()
 
         session = self.Session()
 
@@ -102,12 +116,12 @@ class ScrapyAppPipeline(object):
         time_to_crawl.time_to_crawl = end_time
 
         try:
-                session.add(time_to_crawl)
-                session.commit()
+            session.add(time_to_crawl)
+            session.commit()
 
         except:
-                session.rollback()
-                raise
+            session.rollback()
+            raise
 
         session.close()
 

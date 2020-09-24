@@ -2,12 +2,13 @@ from django.urls import path
 # from main.views import (displayModelObjects,displayCalculatedScores,sendRequestToAPI,viewScoreResults
 # ,findDetails, ListURLDetailsView, ListCrawledURLsView
 # ,viewCrawledResults, viewCrawledResultswithJoBID, viewScoredResultswithJoBID)
-from main.views import (findDetails, viewScoredResultswithJoBID)
+from main.views import (findDetails, viewScoredResultswithJoBID, viewRecentRuns)
 
 
 urlpatterns = [
 
 path('',findDetails,name='find-details'),
+path('viewrecentruns',viewRecentRuns,name='find-recent-runs'),
 # path('display', displayModelObjects, name='display-results'),
 # path('calculatescores', displayCalculatedScores, name='calcaulate-scores'),
 # path('viewscoredresults', viewScoreResults, name='view-scored-results'),
