@@ -1,0 +1,191 @@
+2021-01-05 13:45:02 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: customcrawler)
+2021-01-05 13:45:02 [scrapy.utils.log] INFO: Versions: lxml 4.4.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 18.9.0, Python 3.6.12 (default, Dec 18 2020, 06:04:50) - [GCC 8.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Linux-4.19.121-linuxkit-x86_64-with-debian-10.7
+2021-01-05 13:45:02 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'customcrawler', 'CLOSESPIDER_PAGECOUNT': '10', 'CLOSESPIDER_TIMEOUT': '0', 'CONCURRENT_REQUESTS': 32, 'DEPTH_PRIORITY': 1, 'LOG_FILE': 'logs/customcrawler/toscrapespiderax/3531d6ca4f5c11eb81df0242ac170003.log', 'NEWSPIDER_MODULE': 'customcrawler.spiders', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue', 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue', 'SPIDER_MODULES': ['customcrawler.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36'}
+2021-01-05 13:45:02 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-01-05 13:45:02 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-01-05 13:45:02 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-01-05 13:45:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['customcrawler.pipelines.ScrapyAppPipeline']
+2021-01-05 13:45:03 [scrapy.core.engine] INFO: Spider opened
+2021-01-05 13:45:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-01-05 13:45:03 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2021-01-05 13:45:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.qe.com.qa/> from <GET http://www.qe.com.qa>
+2021-01-05 13:45:15 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.qe.com.qa/> (failed 1 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2021-01-05 13:45:29 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.qe.com.qa/> (failed 2 times): [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
+2021-01-05 13:46:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-01-05 13:46:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/> (referer: None)
+2021-01-05 13:46:20 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.qe.com.qa/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-01-05 13:46:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/listed-companies> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/listed-companies>
+{'extracted_url': 'https://www.qe.com.qa/listed-companies'}
+2021-01-05 13:46:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/#content> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/>
+{'extracted_url': 'https://www.qe.com.qa/'}
+2021-01-05 13:46:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/listings> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/listings>
+{'extracted_url': 'https://www.qe.com.qa/listings'}
+2021-01-05 13:46:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/continuous-obligation> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/continuous-obligation>
+{'extracted_url': 'https://www.qe.com.qa/continuous-obligation'}
+2021-01-05 13:46:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/market-performance> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/market-performance>
+{'extracted_url': 'https://www.qe.com.qa/market-performance'}
+2021-01-05 13:46:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0>
+{'extracted_url': 'https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0'}
+2021-01-05 13:46:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/become-an-investor> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/become-an-investor>
+{'extracted_url': 'https://www.qe.com.qa/become-an-investor'}
+2021-01-05 13:46:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/broker-contact-information> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/broker-contact-information>
+{'extracted_url': 'https://www.qe.com.qa/broker-contact-information'}
+2021-01-05 13:46:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/etfs> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:43 [scrapy.core.engine] INFO: Closing spider (closespider_pagecount)
+2021-01-05 13:46:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/etfs>
+{'extracted_url': 'https://www.qe.com.qa/etfs'}
+2021-01-05 13:46:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/how-to-list> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/how-to-list>
+{'extracted_url': 'https://www.qe.com.qa/how-to-list'}
+2021-01-05 13:46:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/web/guest/home> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/web/guest/home>
+{'extracted_url': 'https://www.qe.com.qa/web/guest/home'}
+2021-01-05 13:46:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/real-time-data> (referer: https://www.qe.com.qa/)
+2021-01-05 13:46:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/real-time-data>
+{'extracted_url': 'https://www.qe.com.qa/real-time-data'}
+2021-01-05 13:47:03 [scrapy.extensions.logstats] INFO: Crawled 13 pages (at 13 pages/min), scraped 12 items (at 12 items/min)
+2021-01-05 13:47:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/authorised-vendors> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/other-data-products> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/authorised-vendors>
+{'extracted_url': 'https://www.qe.com.qa/authorised-vendors'}
+2021-01-05 13:47:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/other-data-products>
+{'extracted_url': 'https://www.qe.com.qa/other-data-products'}
+2021-01-05 13:47:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/financial-statements> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/connectivity> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/financial-statements>
+{'extracted_url': 'https://www.qe.com.qa/financial-statements'}
+2021-01-05 13:47:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/connectivity>
+{'extracted_url': 'https://www.qe.com.qa/connectivity'}
+2021-01-05 13:47:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/data-policy> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/data-policy>
+{'extracted_url': 'https://www.qe.com.qa/data-policy'}
+2021-01-05 13:47:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/brokers-trading-activities> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/brokers-trading-activities>
+{'extracted_url': 'https://www.qe.com.qa/brokers-trading-activities'}
+2021-01-05 13:47:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/agms> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/timeline> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/agms>
+{'extracted_url': 'https://www.qe.com.qa/agms'}
+2021-01-05 13:47:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/profit-/-loss-statements> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/timeline>
+{'extracted_url': 'https://www.qe.com.qa/timeline'}
+2021-01-05 13:47:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/profit-/-loss-statements>
+{'extracted_url': 'https://www.qe.com.qa/profit-/-loss-statements'}
+2021-01-05 13:47:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/bonds-/-sukuks-/-tbills> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/bonds-/-sukuks-/-tbills>
+{'extracted_url': 'https://www.qe.com.qa/bonds-/-sukuks-/-tbills'}
+2021-01-05 13:47:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/investor-corner> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/investor-corner>
+{'extracted_url': 'https://www.qe.com.qa/investor-corner'}
+2021-01-05 13:47:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/companymoreinformationsearch> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/overview> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/companymoreinformationsearch>
+{'extracted_url': 'https://www.qe.com.qa/companymoreinformationsearch'}
+2021-01-05 13:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/overview>
+{'extracted_url': 'https://www.qe.com.qa/overview'}
+2021-01-05 13:47:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/q-disclosure> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/q-disclosure>
+{'extracted_url': 'https://www.qe.com.qa/q-disclosure'}
+2021-01-05 13:47:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/methodologies> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/methodologies>
+{'extracted_url': 'https://www.qe.com.qa/methodologies'}
+2021-01-05 13:47:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/annual-report> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/annual-report>
+{'extracted_url': 'https://www.qe.com.qa/annual-report'}
+2021-01-05 13:47:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/financial-indicators> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/financial-indicators>
+{'extracted_url': 'https://www.qe.com.qa/financial-indicators'}
+2021-01-05 13:47:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/interactive-trading-reports> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/interactive-trading-reports>
+{'extracted_url': 'https://www.qe.com.qa/interactive-trading-reports'}
+2021-01-05 13:47:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/regulations> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/regulations>
+{'extracted_url': 'https://www.qe.com.qa/regulations'}
+2021-01-05 13:47:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/market-notices> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/market-notices>
+{'extracted_url': 'https://www.qe.com.qa/market-notices'}
+2021-01-05 13:47:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/investor-relations> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/investor-relations>
+{'extracted_url': 'https://www.qe.com.qa/investor-relations'}
+2021-01-05 13:47:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/qe-publications> (referer: https://www.qe.com.qa/)
+2021-01-05 13:47:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/qe-publications>
+{'extracted_url': 'https://www.qe.com.qa/qe-publications'}
+2021-01-05 13:48:03 [scrapy.extensions.logstats] INFO: Crawled 35 pages (at 22 pages/min), scraped 34 items (at 22 items/min)
+2021-01-05 13:48:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/insider-trades> (referer: https://www.qe.com.qa/)
+2021-01-05 13:48:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/insider-trades>
+{'extracted_url': 'https://www.qe.com.qa/insider-trades'}
+2021-01-05 13:48:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/index-constituents> (referer: https://www.qe.com.qa/)
+2021-01-05 13:48:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/index-constituents>
+{'extracted_url': 'https://www.qe.com.qa/index-constituents'}
+2021-01-05 13:48:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/statistical-reports> (referer: https://www.qe.com.qa/)
+2021-01-05 13:48:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/statistical-reports>
+{'extracted_url': 'https://www.qe.com.qa/statistical-reports'}
+2021-01-05 13:49:03 [scrapy.extensions.logstats] INFO: Crawled 38 pages (at 3 pages/min), scraped 37 items (at 3 items/min)
+2021-01-05 13:49:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/ipo-guide> (referer: https://www.qe.com.qa/)
+2021-01-05 13:49:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/ipo-guide>
+{'extracted_url': 'https://www.qe.com.qa/ipo-guide'}
+2021-01-05 13:49:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.qe.com.qa/general-overview> (referer: https://www.qe.com.qa/)
+2021-01-05 13:49:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.qe.com.qa/general-overview>
+{'extracted_url': 'https://www.qe.com.qa/general-overview'}
+2021-01-05 13:50:03 [scrapy.extensions.logstats] INFO: Crawled 40 pages (at 2 pages/min), scraped 39 items (at 2 items/min)
+2021-01-05 13:50:14 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.qe.com.qa/boards-nominations> (failed 1 times): User timeout caused connection failure: Getting https://www.qe.com.qa/boards-nominations took longer than 180.0 seconds..
+2021-01-05 13:50:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): axe.checkers.eiii.eu
+2021-01-05 13:50:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (2): axe.checkers.eiii.eu
+2021-01-05 13:50:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (3): axe.checkers.eiii.eu
+2021-01-05 13:50:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (4): axe.checkers.eiii.eu
+2021-01-05 13:50:49 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/listings HTTP/1.1" 200 None
+2021-01-05 13:51:09 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/listed-companies HTTP/1.1" 200 None
+2021-01-05 13:51:18 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/continuous-obligation HTTP/1.1" 200 None
+2021-01-05 13:51:21 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/ HTTP/1.1" 504 182
+2021-01-05 13:51:21 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2021-01-05 13:51:21 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/
+2021-01-05 13:51:51 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/market-performance HTTP/1.1" 504 182
+2021-01-05 13:51:51 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/market-performance'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2021-01-05 13:51:51 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/market-performance
+2021-01-05 13:52:11 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0 HTTP/1.1" 504 182
+2021-01-05 13:52:11 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2021-01-05 13:52:11 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0
+2021-01-05 13:52:23 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/ HTTP/1.1" 504 182
+2021-01-05 13:52:23 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2021-01-05 13:52:23 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/
+2021-01-05 13:52:24 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/become-an-investor HTTP/1.1" 504 182
+2021-01-05 13:52:24 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/become-an-investor'): Retry(total=2, connect=3, read=3, redirect=None, status=None)
+2021-01-05 13:52:24 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/become-an-investor
+2021-01-05 13:52:53 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/market-performance HTTP/1.1" 504 182
+2021-01-05 13:52:53 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/market-performance'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2021-01-05 13:52:53 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/market-performance
+2021-01-05 13:53:11 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0 HTTP/1.1" 504 182
+2021-01-05 13:53:11 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0'): Retry(total=1, connect=3, read=3, redirect=None, status=None)
+2021-01-05 13:53:12 [urllib3.connectionpool] DEBUG: Retry: /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/c/portal/layout?p_l_id=22195&p_v_l_s_g_id=0
+2021-01-05 13:53:25 [urllib3.connectionpool] DEBUG: http://axe.checkers.eiii.eu:80 "GET /export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/ HTTP/1.1" 504 182
+2021-01-05 13:53:25 [urllib3.util.retry] DEBUG: Incremented Retry for (url='/export-jsonld/pagecheck2.0/?url=https://www.qe.com.qa/'): Retry(total=0, connect=3, read=3, redirect=None, status=None)

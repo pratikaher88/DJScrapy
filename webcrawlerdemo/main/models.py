@@ -1,13 +1,5 @@
 from django.db import models
 from django.core.validators import URLValidator
-
-
-# class Quote(models.Model):
-#     """
-#     The scrapped data will be saved in this model
-#     """
-#     job_data_id = models.IntegerField(blank=True, null=True)
-#     text = models.TextField()
     
 
 class URL_Details(models.Model):
@@ -18,9 +10,6 @@ class URL_Details(models.Model):
     total_verify = models.CharField(max_length=100, blank = True)
     total_pass = models.CharField(max_length=100, blank = True)
     total_score = models.CharField(max_length=100, blank = True)
-
-# class FeedbackInfoInputModel(models.Model):
-#     site_name = models.CharField(max_length=500,validators=[URLValidator()])
 
 class TimeToCrawl(models.Model):
 

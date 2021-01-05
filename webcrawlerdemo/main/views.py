@@ -44,12 +44,7 @@ def findDetails(request):
     
     return render(request,'find_details.html')
 
-
-	# return render(request,'find_details.html',{'id':1})
-
-
-    # return render(request,'find_details.html')
-
+    # return render(request,'find_details.html',{'id':1})
 
 # class ListURLDetailsView(generics.ListAPIView):
 #     queryset = URL_Details.objects.all()

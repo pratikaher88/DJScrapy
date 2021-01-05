@@ -24,7 +24,7 @@ Your JOB ID is : {{ job_data_id }} (Use this to access records next time)
 
 You can find the results at : 
 
-<a href="{% url 'view-scored-results-with-jobid' job_data_id=job_data_id %}">https://webcrawlerdemo.herokuapp.com/viewscoredresults/{{ job_data_id }}</a>
+<a href="{% url 'view-scored-results-with-jobid' job_data_id=job_data_id %}">{% url 'view-scored-results-with-jobid' job_data_id=job_data_id %}</a>
 
 
 {% endblock content %}
