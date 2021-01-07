@@ -1,6 +1,5 @@
 from celery import shared_task
 from celery.app.base import Celery
-from customcrawler import celeryconfig
 from customcrawler.retry_mechanism import retry_session
 from customcrawler.models import URL_details
 from sqlalchemy.orm import sessionmaker
@@ -11,12 +10,6 @@ import requests
 from multiprocessing.dummy import Pool as ThreadPool 
 from functools import partial
 import json
-
-
-# requests.adapters.DEFAULT_RETRIES = 5
-# app = Celery('customcrawler', broker=CELERY_BROKER_URL)
-# app = Celery('customcrawler',broker='amqp://admin:mypass@rabbitmq:5672',backend='rpc://')
-# app.config_from_object(celeryconfig)
 
 session_retry = retry_session(retries=3)
 headers = {'User-Agent': 'Mozilla/5.0'}
