@@ -103,8 +103,8 @@ def saveScoredURLS(response, jobID):
     print("Job ID", jobID)
     # print(request.body)
 
-    data = response.json()
-    data =  data['body']['result']
+    data = json.loads(response.body)
+    data =  data['result']
 
     url_details = URL_Details()
 
