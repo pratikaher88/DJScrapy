@@ -125,7 +125,7 @@ def newProcessForLoop(job_data_id, base_url):
 
     headers = {"content-type":"application/json"}
 
-    response = requests.post('http://axechecker.tingtun.no/check?cb=http://django_app:8000/saveurls/'+str(job_data_id), json.dumps(data), headers=headers)
+    response = requests.post('http://axechecker.tingtun.no/check?cb=http://151.236.216.113:8000/saveurls/'+str(job_data_id), json.dumps(data), headers=headers)
 
     print(response.text)
 
