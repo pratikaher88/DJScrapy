@@ -4,6 +4,7 @@ from urllib.parse import urlparse
 from django.core.exceptions import ValidationError
 from django.views.decorators.http import require_POST, require_http_methods
 from django.shortcuts import render
+from django.http import HttpResponse
 
 import random, requests
 
@@ -100,4 +101,6 @@ def saveScoredURLS(request, jobID):
     print("Response recieved!")
 
     print("Job ID", jobID)
-    print(request.body)
+    # print(request.body)
+
+    rreturn HttpResponse('Saved to DB!')
