@@ -96,11 +96,25 @@ def viewRecentRuns(request):
 
 @csrf_exempt
 @require_POST
-def saveScoredURLS(request, jobID):
+def saveScoredURLS(response, jobID):
 
     print("Response recieved!")
 
     print("Job ID", jobID)
     # print(request.body)
+
+    data = response.body.json()
+
+    data =  data['result']
+
+    url_details = URL_Details()
+
+    url_details.job_data_id = jobID
+    url_details.site_name = data['url']
+    url_details.total_violations = data['inapplicable']
+    url_details.total_verify = data['incomplete']
+    url_details.total_pass = data['passes']
+
+    url_details.save()
 
     return HttpResponse('Saved to DB!')
