@@ -2,17 +2,18 @@ from django.urls import path
 # from main.views import (displayModelObjects,displayCalculatedScores,sendRequestToAPI,viewScoreResults
 # ,findDetails, ListURLDetailsView, ListCrawledURLsView
 # ,viewCrawledResults, viewCrawledResultswithJoBID, viewScoredResultswithJoBID)
-from main.views import (findDetails, viewScoredResultswithJoBID, viewRecentRuns)
+from main.views import (findDetails, viewScoredResultswithJoBID, viewRecentRuns, saveScoredURLS)
 
 
 urlpatterns = [
 
 path('',findDetails,name='find-details'),
 path('viewrecentruns',viewRecentRuns,name='find-recent-runs'),
+path('viewscoredresults/<int:job_data_id>', viewScoredResultswithJoBID, name='view-scored-results-with-jobid'),
+path('saveurls/<int:jobID>', saveScoredURLS, name='save-scored-urls')
 # path('display', displayModelObjects, name='display-results'),
 # path('calculatescores', displayCalculatedScores, name='calcaulate-scores'),
 # path('viewscoredresults', viewScoreResults, name='view-scored-results'),
-path('viewscoredresults/<int:job_data_id>', viewScoredResultswithJoBID, name='view-scored-results-with-jobid'),
 # path('viewcrawledresults', viewCrawledResults, name='view-crawled-results'),
 # path('viewcrawledresults/<int:job_data_id>', viewCrawledResultswithJoBID, name='view-crawled-results-with-jobid'),
 # path('sendreqtoapi', sendRequestToAPI, name='send-request-to-api'),

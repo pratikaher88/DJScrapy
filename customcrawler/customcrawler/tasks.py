@@ -10,6 +10,7 @@ from celery import group
 import requests
 from multiprocessing.dummy import Pool as ThreadPool 
 from functools import partial
+import json
 
 
 # requests.adapters.DEFAULT_RETRIES = 5
@@ -116,10 +117,25 @@ class ProcessTask(object):
 def threadProcess(reservoir, job_data_id):
     reservoir = list(filter( bool, reservoir))
     pool = ThreadPool(4)  # Make the Pool of workers
-    func = partial(processForLoop, job_data_id)
+    func = partial(newProcessForLoop, job_data_id)
     pool.map(func, reservoir) #Open the urls in their own threads
     pool.close() #close the pool and wait for the work to finish 
     pool.join()
+
+
+
+def newProcessForLoop(job_data_id, base_url):
+
+    data = {
+        "url":base_url
+        }
+
+    headers = {"content-type":"application/json"}
+
+    response = requests.post('http://axechecker.tingtun.no/check?cb=http://151.236.216.113:8000/saveurls/'+str(job_data_id), json.dumps(data), headers=headers)
+
+    print(response.text)
+
 
 
 def processForLoop(job_data_id, base_url):

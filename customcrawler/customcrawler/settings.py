@@ -111,3 +111,5 @@ SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
 CELERY_BROKER_URL = 'amqp://guest@rabbitmq:5672//'
 
 AXE_CHECKER_URL = 'http://axe.checkers.eiii.eu/export-jsonld/pagecheck2.0/?url='
+
+NEW_AXE_CHECKER_URL = 'http://axechecker.tingtun.no/check'

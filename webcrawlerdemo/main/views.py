@@ -10,6 +10,8 @@ import random, requests
 from random import randint
 
 from main.models import URL_Details,TimeToCrawl,Recent_Runs
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 
 
 @require_http_methods(['POST', 'GET']) 
@@ -90,3 +92,12 @@ def viewRecentRuns(request):
 
     return render(request,'viewrecentruns.html', { 'recent_runs_objects': crawled_objects })
 
+
+@csrf_exempt
+@require_POST
+def saveScoredURLS(request, jobID):
+
+    print("Response recieved!")
+
+    print("Job ID", jobID)
+    print(request.body)
