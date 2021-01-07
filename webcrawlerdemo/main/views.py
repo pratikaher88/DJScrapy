@@ -13,7 +13,7 @@ from random import randint
 from main.models import URL_Details,TimeToCrawl,Recent_Runs
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
-
+import json
 
 @require_http_methods(['POST', 'GET']) 
 def findDetails(request):
@@ -103,17 +103,16 @@ def saveScoredURLS(response, jobID):
     print("Job ID", jobID)
     # print(request.body)
 
-    data = response.body.json()
-
-    data =  data['result']
+    data = response.json()
+    data =  data['body']['result']
 
     url_details = URL_Details()
 
     url_details.job_data_id = jobID
     url_details.site_name = data['url']
-    url_details.total_violations = data['inapplicable']
-    url_details.total_verify = data['incomplete']
-    url_details.total_pass = data['passes']
+    url_details.total_violations = len(data['inapplicable'])
+    url_details.total_verify = len(data['incomplete'])
+    url_details.total_pass = len(data['passes'])
 
     url_details.save()
 
