@@ -105,7 +105,9 @@ def saveScoredURLS(response, jobID):
 
     data = json.loads(response.body)
 
-    print(data['url'])
+    # print(data['url'])
+    for _ in data:
+        print(_.keys())
     return
 
     data =  data['result']
