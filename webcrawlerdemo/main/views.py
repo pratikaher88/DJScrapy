@@ -108,15 +108,6 @@ def saveScoredURLS(response, jobID):
     if 'result' in data.keys():
         data = data['result']
 
-
-    print(len(data['passes']))
-
-    # print(data['url'])
-    # for value in data[:5]:
-    #     print(value)
-    return HttpResponse('Saved to DB!')
-
-
     url_details = URL_Details()
 
     url_details.job_data_id = jobID
