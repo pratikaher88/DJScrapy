@@ -105,7 +105,9 @@ def saveScoredURLS(response, jobID):
 
     data = json.loads(response.body)
 
-    print(data.keys())
+    if 'result' in data.keys():
+        data = data['result']
+
 
     print(len(data['passes']))
 
