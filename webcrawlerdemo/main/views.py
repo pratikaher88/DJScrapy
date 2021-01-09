@@ -116,6 +116,8 @@ def saveScoredURLS(response, jobID):
     url_details.total_verify = len(data['incomplete'])
     url_details.total_pass = len(data['passes'])
 
+    url_details.total_score = float("{0:.5f}",format(1 - (len(data['inapplicable'])/(len(data['inapplicable'])+len(data['incomplete'])+len(data['passes'])))))
+
     url_details.save()
 
     return HttpResponse('Saved to DB!')
