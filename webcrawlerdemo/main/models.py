@@ -7,8 +7,9 @@ class URL_Details(models.Model):
     job_data_id = models.IntegerField(blank=True, null=True)
     site_name = models.CharField(max_length=1000,validators=[URLValidator()])
     total_violations = models.CharField(max_length=100, blank = True)
-    total_verify = models.CharField(max_length=100, blank = True)
-    total_pass = models.CharField(max_length=100, blank = True)
+    total_incomplete = models.CharField(max_length=100, blank = True)
+    total_inapplicable = models.CharField(max_length=100, blank = True)
+    total_passes = models.CharField(max_length=100, blank = True)
     total_score = models.CharField(max_length=100, blank = True)
 
 class TimeToCrawl(models.Model):

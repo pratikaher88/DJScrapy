@@ -18,8 +18,9 @@ class URL_details(Base):
     job_data_id = Column('job_data_id', Integer())
     site_name = Column('site_name', Text())
     total_violations = Column('total_violations', Text())
-    total_verify = Column('total_verify', Text())
-    total_pass = Column('total_pass', Text())
+    total_incomplete = Column('total_incomplete', Text())
+    total_passes = Column('total_passes', Text())
+    total_inapplicable = Column('total_inapplicable', Text())
     total_score = Column('total_score', Text())
 
 class TimeToCrawl(Base):

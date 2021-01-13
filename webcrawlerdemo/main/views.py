@@ -112,11 +112,12 @@ def saveScoredURLS(response, jobID):
 
     url_details.job_data_id = jobID
     url_details.site_name = data['url']
-    url_details.total_violations = len(data['inapplicable'])
-    url_details.total_verify = len(data['incomplete'])
-    url_details.total_pass = len(data['passes'])
+    url_details.total_violations = len(data['violations'])
+    url_details.total_incomplete = len(data['incomplete'])
+    url_details.total_inapplicable = len(data['inapplicable'])
+    url_details.total_passes = len(data['passes'])
 
-    url_details.total_score = float("{0:.5f}".format(1 - (len(data['inapplicable'])/(len(data['inapplicable'])+len(data['incomplete'])+len(data['passes'])))))
+    url_details.total_score = float("{0:.5f}".format(1 - (len(data['violations'])/(len(data['violations'])+len(data['inapplicable'])+len(data['incomplete'])+len(data['passes'])))))
 
     url_details.save()
 
